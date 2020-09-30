@@ -332,6 +332,12 @@
             #palavrasChaves{
                 width: 400px;
             }
+
+            #numCrawlers::-webkit-outer-spin-button,
+            #numCrawlers::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -366,6 +372,16 @@
                 <input type="text" id="palavrasChaves"></input>
             </div>
         </label>
+        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
+            <label>
+                Iniciar <input type="number" maxlength="15" max="15" id="numCrawlers" style="width: 60px;text-align: center;" value="1"> Crawler simultaneo
+            </label>
+        </div>
+        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
+            <label>
+                <input type="checkbox" id="repetirUrl" style="height: 18px;width: 18px;"> Não repetir urls do Crawler anterior
+            </label>
+        </div>
         <div style="display: flex;justify-content: center;align-items: center;">
             <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
         </div>
@@ -396,24 +412,7 @@
         </div>
 
         <div class="container" id="itemList">
-            <!--
-            {{#data}}
-                <div class="item">
-                    <div class="header">
-                        {{dominio}}
-                    </div>
-                    <div class="content">
-                        <p><strong>Pagina:</strong> <label>{{pagina}}</label></p>
-                        <p><strong>Url:</strong> <label><a href="{{& protocolo}}://{{& dominio}}{{& pagina}}">{{protocolo}}://{{dominio}}{{pagina}}</a></label></p>
-                        <ul>
-                           <li>
-                               {{if(erros)}}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            {{/data}}
-            -->
+
         </div>
 
         <div class="cardsStatus" id="cardsStatus">
@@ -588,7 +587,7 @@
 
             function montaTela(data){
                 let count = 0;
-                data.map((e,i)=>{
+                data.forEach((e,i)=>{
                     
                     let li = "";
                     if(data[i].erros != undefined && data[i].erros != ""){
@@ -678,24 +677,19 @@
                 let urlBase = $("#urlBase").val();
                 let palavrasChave = $("#palavrasChaves").val();
                 let protocolo = $("#protocolo").val();
+                let repetirUrl = $("#repetirUrl").val() == "on";
+                let numCrawlers = $("#numCrawlers").val();
+                console.log("asdasdasdasdasdad: " + numCrawlers);
                 
                 if(!urlBase.includes("http") || !urlBase.includes("://")){
                     urlBase = protocolo + "://" + urlBase;
                 }
                 
-                /*
-                if(instancia == 1){
-                    $(".btnCrawler").eq(0).prop("disabled",true);
-                }else{
-                    $(".btnCrawler").eq(1).prop("disabled",true);
-                }
-                */
-
                 if($("#urlBase").val() != null && $("#urlBase").val().length >= 6){
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { baseUrl: urlBase,palavrasChave: palavrasChave}, 
+                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers}, 
                         success: function (data) {
 
                             verificaCrawler(true);
@@ -797,10 +791,7 @@
                     $("#tempo" + e.Id).html(montaTempo);
                     $("#rodando" + e.Id).html(e.Rodando ? "Rodando" : "Parado");
                     $("#status" + e.Id).css("background-color","#83d69a");
-                    //$(".btnCrawler").eq(0).prop("disabled",true);
-                
                     e.Rodando ? "" : $("#status" + e.Id).css("background-color","#e68b8b");
-                    //$(".btnCrawler").eq(0).prop("disabled",false);
 
                 });
 

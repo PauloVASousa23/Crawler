@@ -38,10 +38,15 @@ app.get('/getLog', (req,res) => {
     }
 })
 
-app.post('/startCrawler/', (req,res) => {
+app.post('/startCrawler/', async(req,res) => {
     try{
-        Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave);
+        for(let i=0;i<req.body.simultaneos; i++){
+            await delay(2000);
+            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl);
+        }
+        
         res.send('Crawler iniciado!');
+        
     }catch(err){
         console.log(err);
         res.send('Erro ao iniciar Crawler');
@@ -75,5 +80,11 @@ app.post('/deleteCrawler/', (req,res) => {
     }
     res.send("Deletado com sucesso!");
 });
+
+function delay(time) {
+    return new Promise(function(resolve) { 
+        setTimeout(resolve, time)
+    });
+}
 
 app.listen(3000, () => console.log("Listening on port 3000"));

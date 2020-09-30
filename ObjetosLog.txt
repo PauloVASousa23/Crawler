@@ -1,66 +1,1566 @@
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/vestibular",
+	"pagina": "/tvweb/video/index?id=433&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["REQUEST: net::ERR_ABORTED https://api.pn.vg/webPushAnalytics|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/custom.js:2:1|","|PAGEERROR: ReferenceError: $ is not defined at https://www.unip.br/presencial/includes/js/log-aluno.js:3:1|","|CONSOLE: Mixed Content: The page at 'https://unip.br/presencial/vestibular' was loaded over HTTPS, but requested an insecure script 'http://code.jquery.com/jquery-3.3.1.min.js'. This request has been blocked; the content must be served over HTTPS.|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:118 at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:126|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.pt-BR.min.js:1:493|","|PAGEERROR: ReferenceError: $ is not defined at https://unip.br/presencial/vestibular:488:5"]
+	"erros": ["RESPONSE: 404: https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/AdrianaZanetti_99.mp4|","|CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/ead",
+	"pagina": "/tvweb/video/index?id=432&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|CONSOLE: Failed to load resource: the server responded with a status of 404 ()|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170913_AlvaroAzevedo_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/ensino/pos_graduacao/strictosensu/index.aspx",
+	"pagina": "/tvweb/video/index?id=431&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=f7f79a59-3bed-4e12-9a28-44993e267ced:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=f7f79a59-3bed-4e12-9a28-44993e267ced:1:6002"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170913_IlanaCasoy_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/",
+	"pagina": "/tvweb/video/index?id=430&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=f7f79a59-3bed-4e12-9a28-44993e267ced:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=f7f79a59-3bed-4e12-9a28-44993e267ced:1:6002"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170912_FranciscoCembranelli_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/vestibular",
+	"pagina": "/tvweb/video/index?id=429&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/custom.js:2:1|","|PAGEERROR: ReferenceError: $ is not defined at https://www.unip.br/presencial/includes/js/log-aluno.js:3:1|","|CONSOLE: Mixed Content: The page at 'https://unip.br/presencial/vestibular' was loaded over HTTPS, but requested an insecure script 'http://code.jquery.com/jquery-3.3.1.min.js'. This request has been blocked; the content must be served over HTTPS.|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:118 at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:126|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.pt-BR.min.js:1:493|","|PAGEERROR: ReferenceError: $ is not defined at https://unip.br/presencial/vestibular:488:5"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170912_PedroLenza_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/ead/processoseletivo/inscrevase",
+	"pagina": "/tvweb/video/index?id=428&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/06/682f0a5f-f754-44c6-af33-ee51c7c97c22.jpg|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/12/0a1aecd0-57c5-4282-bd4d-a783e3753268.jpg|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/12/c2243c3f-f4ae-4db3-9480-4917b0dd1496.jpg|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/fonts/fa-brands-400.woff2|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Fonts/HelveticaNeue-CondensedBold.woff|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/12/42f335bd-8dd4-4d89-99e9-53c4787c5f7a.jpg|","|REQUEST: net::ERR_ABORTED https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/06/6de57ff7-8b3c-42b4-bbc2-b370caceaae3.jpg|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/fonts/fa-solid-900.woff2|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/12/e4f96783-dd34-4153-8c7d-109568df8083.jpg|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/06/cceca474-6974-4653-93dc-a104bee52d91.jpg|","|REQUEST: net::ERR_ABORTED https://www.googletagmanager.com/gtm.js?id=GTM-KJ9CG3|","|REQUEST: net::ERR_ABORTED https://api.unip.br/Sistemas/banner/Arquivos/2020/08/12/3547e9d2-d13a-4aed-9f24-f715a287e3fb.jpg|","|REQUEST: net::ERR_ABORTED https://www.unip.br/presencial/includes/js/log-aluno.js|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Fonts/MyriadPro-Cond.woff"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170911_ElisabeteSato_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/ead/",
+	"pagina": "/tvweb/video/index?id=427&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|CONSOLE: Failed to load resource: the server responded with a status of 404 ()|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/170911_MariaGarcia_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/ead",
+	"pagina": "/tvweb/video/index?id=425&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|CONSOLE: Failed to load resource: the server responded with a status of 404 ()|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160915_PedroLenza_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/ead",
+	"pagina": "/tvweb/video/index?id=424&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:6002"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160915_MariaGarcia_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/servicos/aluno/como_acessar.aspx",
+	"pagina": "/tvweb/video/index?id=423&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:6002"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160914_GianpaoloSmanio_99.mp4"]
 },
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/",
+	"pagina": "/tvweb/video/index?id=422&aovivo=1&banda=0",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=1d6f81ab-1c08-4546-bc6f-2a96232697af:1:6002|","|RESPONSE: 404: https://sec.unip.br/favicon.ico|","|CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160914_AlvaroAzevedo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=421&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160913_SylviaSteiner_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=420&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160913_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=419&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160912_MauroNacif_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=418&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/160912_GuilhermeNucci_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=416&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/150520_EITEC_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=415&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/150519_EITEC_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=409&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/sei/android/eventos/141018_JairoMartins_Palestra_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=408&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/140331_MesaRedonda_PNH_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=407&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120830_IlanaCasoy_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=406&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120830_CelsoLimonge_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=405&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120831_EliseuGabriel_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=404&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120831_RubenTeixeira_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=403&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120828_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=402&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120827_CelsoRussomanno_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=401&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120829_FernandoCapez_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=400&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120828_LuizaEluf_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=399&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/direito/android/120827_GabrielChalita_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=398&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/130913_JoseEduardoCardozo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=390&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/100416_MassamiUyeda_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=388&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Servico_Social/android/130517_RosalinaLeite_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=387&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Letras/android/130319_ViolenciaContraMulher_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=385&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/120824_JoseEduardoCardozo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=379&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Pedagogia/android/110929_ErikaLandau_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=378&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/110826_COREN_Itinerante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=377&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/110818_COREN_Itinerante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=372&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/110630_COREN_Itinerante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=370&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/110525_COREN_Itinerante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=369&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Enfermagem/android/110323_ClaudioPorto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=368&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101016_Java_Net_Futuro_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=367&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101016_Java_Net_Aplicacao_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=366&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101016_Java_Net_Nuvem_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=364&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101016_Java_Net_Web_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=363&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101015_Java_Net_Certificacao_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=362&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101015_Java_Net_RIA_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=361&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101015_Java_Net_Dados_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=360&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101015_Java_Net_Programacao_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=359&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/101015_Java_Net_Servidor_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=322&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/100416_MassamiUyeda_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=321&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Social/android/100405_BobNugent_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=320&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Engenharia/android/100330_CassildaTeixeira_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=319&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Jornalismo/android/100329_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=318&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/100329_JoseCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=317&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Fisioterapia/android/100326_GilLucioAlmeida_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=316&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Administracao/android/100325_AleksandarMandic_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=315&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/100322_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=314&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Arquitetura_e_Urbanismo/android/100324_MarcosAcayaba_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=313&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/300606_Entrevista_Marcelo_Souza_Marcelo_Vannini_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=312&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/101207_SemanaDigital_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=311&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/061003_MinNelsonJobim_part04-B_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=310&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/061003_MinNelsonJobim_part03-B_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=309&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/061003_MinNelsonJobim_part02-B_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=308&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/061003_MinNelsonJobim_part01-B_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=307&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/280904_GilmarMendes_B-1_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=306&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Moda/android/041004_AlexandreHercovich_B_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=305&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/130606_entrevista_iluminadora_Mirella_Brandi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=304&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/070606_entrevista_diretor_Rubens_Velloso_playonearth_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=303&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/070606_coletiva_playonearth_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=302&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/210606_entrevista_BETOMATOS_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=301&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/210606_Materia_Mixtv_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=300&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/111006_microsoft_IPTV_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=299&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/041007_microsoft_expressionAroundTheClock_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=298&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/081013_Gamefest_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=297&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/031006_formulaunip_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=296&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/151005_formulaunip_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=295&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Eventos/android/131005_formulaunip_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=294&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/071114_UnipRedes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=293&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/050817_EdsonVidigal_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=292&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/050826_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=291&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/051104_AldoRebello_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=290&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Ciencias_da_Computacao/android/070627_SemanaMobilidade_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=289&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/041105_Min_Educacao_China_ZhouJi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=288&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/040925_EdsonVidigal_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=287&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/040921_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=286&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Digital/android/031113_AULASONY_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=283&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Gestao_Redes/android/071113_UnipRedes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=282&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Digital/android/080918_SemanaTecnologia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=281&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Digital/android/080917_SemanaTecnologia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=280&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Digital/android/080916_SemanaTecnologia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=279&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Comunicacao_Digital/android/080915_SemanaTecnologia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=278&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Direito/android/060929_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=277&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Eventos/android/091021_LancamentoWin7_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=274&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/090504_CristinaLobo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=273&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/090505_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=272&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Educacao_Fisica/android/090507_LarsGrael_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=271&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/090511_JoseEduardoCardozo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=270&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/090512_AugustoNunes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=269&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 404: https://tvweb3.unip.br/video/TVWEB/Unip/Treinamentos/BandaLarga/090318_Nivelamento_DeborahCatarinacho_99.mp4|","|CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=264&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/090522_RicardoLewandowski_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=257&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/090909_PriscilaSiqueira_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=207&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Digital/android/061130_Microsoft_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=206&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Social/android/040920_AllanBarros_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=205&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050911_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=204&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070611_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=203&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040318_Pauliceia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=202&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070326_Varella_Janini_lima_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=201&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/061024_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=200&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070412_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=199&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050816_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=198&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050815_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=197&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050620_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=196&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070423_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=195&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050617_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=194&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050613_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=192&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050603_EdsonVidigal_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=191&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070601_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=189&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/041001_EdsonVidigal_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=188&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040922_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=187&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070813_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=186&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070815_RodrigoPinho_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=185&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040818_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=184&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070816_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=183&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040812_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=182&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070817_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=181&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070817_RicardoLewandowski_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=180&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040811_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=179&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/070828_JoseToffoli_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=178&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040810_AlexandreMoraes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=177&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/071022_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=176&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080418_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=175&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040622_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=173&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/060928_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=172&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040616_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=171&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/071022_RicardoLewandowski_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=170&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/060516_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=169&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040608_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=168&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/071029_ErosGrau_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=167&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040526_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=166&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040519_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=165&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040414_NancyAndrighi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=164&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040503_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=163&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/071105_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=162&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040428_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=161&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/060310_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=160&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080414_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=159&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040414_NancyAndrighi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=158&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/051125_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=157&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/050829_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=156&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080425_RicardoLewandowski_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=155&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040331_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=154&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080430_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=153&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040324_CarlosVelloso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=152&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080508_MassamiUyeda_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=151&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080811_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=150&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080811_IvesGandra_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=149&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040316_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=148&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080811_LuizDurso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=147&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080814_MassamiUyeda_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=146&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080815_ErosGrau_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=145&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040316_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=144&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080815_RicardoLewandowski_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=143&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040310_GilmarMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=142&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/080818_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=141&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/040309_NelsonJobim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=140&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Direito/android/081028_JoseEduardoCardoso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=139&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Social/android/040921_JoseHamiltonRibeiro_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=138&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Social/android/040511_NizanGuanaes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=137&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Fisioterapia/android/081031_AmeliaMarques_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=134&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Digital/android/051030_JucaMartins_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=133&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Fisioterapia/android/071016_GilLucioAlmeida_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=132&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Comunicacao_Digital/android/040811_RenatoQuedas_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=131&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Fisioterapia/android/040909_GilLucioAlmeida_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=130&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/070308_AntonioCelso_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=129&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Farmacia/android/040910_ArnaldoZubioli_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=128&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Farmacia/android/071112_RaquelGrecchi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=127&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/051109_AugustoNunes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=126&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/060403_DanuzaLeao_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=125&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/060605_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=124&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/060607_ZuenirVentura_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=123&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/070228_Microsoft_MDSNAA_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=122&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/060614_GilbertoDimenstein_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=121&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Farmacia/android/040913_FranciscoPaulaCaravante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=120&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/060905_CarlosTramontina_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=118&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/061130_RobertoSonnino_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=117&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/070528_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=116&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/061130_ReniltonCarvalho_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=115&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/080505_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=114&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/081007_LaurentinoGomes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=113&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Jornalismo/android/081022_WilliamWaack_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=111&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/090520_MichalGartenkraut_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=110&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Medicina_Veterinaria/android/040915_FranciscoFerreiraJardim_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=109&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/061130_CarlosHulot_imaginecup_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=108&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Moda/android/040928_RossildoFaria_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=107&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/081031_MarcoSaltini_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=106&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Moda/android/060522_GloriaKalil_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=105&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/040923_AlbaCristinaMelo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=104&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Moda/android/070531_GloriaKalil_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=103&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/080515_MichalGartenkraut_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=102&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_da_Computacao/android/040416_AlbaCristinaMelo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=101&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Nutricao/android/040914_GillianAlonsoArruda_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=100&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/080512_SilvioCrestana_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=99&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Nutricao/android/081006_AryLopes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=98&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/070530_LeonamGuimaraes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=97&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Odontologia/android/040908_AntonioWilsonSallum_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=96&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Odontologia/android/040909_EmilAdibRazuk_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=95&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/070411_DurvalDamiami_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=94&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Engenharia/android/040413_GuilhermeCaribe_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=92&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Pedagogia/android/051024_GabrielChalita_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=91&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Pedagogia/android/040923_MariaClaraPaesTobo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=90&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Enfermagem/android/071018_JuremaPalomo_FatimaGerolin_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=89&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Pedagogia/android/050614_GabrielChalita_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=88&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/060612_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=87&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Enfermagem/android/040913_ClaudiaReginaLaselva_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=86&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/060519_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=85&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Pedagogia/android/040625_GabrielChalita_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=84&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Pedagogia/android/060608_ErikaLandau_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=83&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Psicologia/android/040916_AnaMerces_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=82&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Educacao_Fisica/android/070903_OrlandoSilva_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=81&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Psicologia/android/040927_MiguelAngelo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=80&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Psicologia/android/061026_Contardo%20Calligaris_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=79&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Educacao_Fisica/android/040924_MarioJorgeLoboZagallo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=78&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Psicologia/android/070529_FlavioGikovate_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=77&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/Multiensino/Psicologia/android/071025_MarileneProenca_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=76&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Educacao_Fisica/android/040908_LinoCastellani_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=75&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Secretariado/android/040929_MariadoCarmoAssis_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=74&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Turismo/android/040928_CaioLuiz_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=73&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Turismo/android/040325_EduardoEhlers_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=72&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/051017_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=71&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/050610_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=70&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/040910_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=69&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/040618_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=68&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Ciencias_Biologicas/android/040521_DrauzioVarella_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=67&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/090519_HectorVigliecca_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=66&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/081030_SiegbertZanettini_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=65&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/070614_AlbertoBotti_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=64&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 404: https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/061017_GianCarloGasperini_99.mp4|","|CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=63&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/060609_PauloMendes_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=62&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/051123_DecioTozzi_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=61&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/051110_RuyOhtake_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=60&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/050929_PauloSophia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=59&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/041001_PauloSophia_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=58&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/Arquitetura_e_Urbanismo/android/040623_RuyOhtake_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=57&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/081104_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=56&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/081006_RenaldoCalderini_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=55&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/080513_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=54&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/080314_palestra_bmf_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=53&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/080307_palestra_bmf_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=52&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/080229_palestra_bmf_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=51&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/080222_palestra_bmf_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=50&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/070613_SilviodosSantos_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=49&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/070403_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=48&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/060921_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=47&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/051107_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=46&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/050928_RenaldoCalderini_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=45&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/050913_Administracao_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=44&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040927_DelfimNetto_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=43&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040917_AlexandreMathias_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=42&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040916_MauroKreuz_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=41&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040915_JosmarVerillo_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=39&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040518_AloisioMercadante_99.mp4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/tvweb/video/index?id=38&aovivo=1&banda=0",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://tvweb3.unip.br/video/TVWEB/Unip/multiensino/administracao/android/040427_DelfimNetto_99.mp4"]
 },
