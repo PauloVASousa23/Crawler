@@ -1593,3 +1593,9 @@
 [0930/135708.849:ERROR:file_io_win.cc(162)] CreateFile C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-BqHnwS\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
 [0930/135709.007:ERROR:file_io_win.cc(171)] CreateFile C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-BqHnwS\Crashpad\reports\7363f649-4cde-4f3f-b747-6c2a38cc3af0.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
 [0930/135709.060:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[1015/170508.440:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-wj2WVe\Crashpad\attachments\fbb251ee-c272-4da0-bdba-7e47ed59fc40: O sistema não pode encontrar o caminho especificado. (0x3)
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 73548
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1015/171415.917:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1015/174101.310:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)

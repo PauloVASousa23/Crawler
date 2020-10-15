@@ -8,7 +8,9 @@ function getUrlsAcessadas(){
 }
 
 function setUrlsAcessadas(url){
-    urlsAcessadas.push(url);
+    if(!urlsAcessadas.includes(url)){
+        urlsAcessadas.push(url)
+    }
 }
 
 function getUrlsPegas(){
@@ -16,11 +18,17 @@ function getUrlsPegas(){
 }
 
 function setUrlsPegas(url){
-    urlsPegas.push(url);
+    if(!urlsPegas.includes(url)){
+        urlsPegas.push(url)
+    }
+}
+
+function getInstancias(){
+    return instancia;
 }
 
 function getInstancia(id){
-    return instancia;
+    return instancia[id];
 }
 
 function setInstancia(objeto){
@@ -34,14 +42,15 @@ function setInstancia(objeto){
         Parou:objeto.Parou,
         PalavrasChave:objeto.PalavrasChave,
         Pagina:objeto.Pagina,
-        Urls:objeto.Urls,
-        urlsAcessadas:objeto.urlsAcessadas,
-        urlsPegas:objeto.urlsPegas
+        Urls:getUrlsPegas(),
+        urlsAcessadas:getUrlsAcessadas(),
+        urlsPegas:""
     };
 
     id++;
 
     instancia.push(objInstancia);
+    return objInstancia.Id;
 }
 
 module.exports = {
@@ -50,5 +59,6 @@ module.exports = {
     getUrlsPegas,
     setUrlsPegas,
     getInstancia,
+    getInstancias,
     setInstancia
 }

@@ -19,15 +19,11 @@ module.exports = {
             });
         }
 
-        console.log("0--> "+globais.getUrlsPegas());
-        globais.setUrlsPegas("Unip.br");
-        console.log("1--> "+globais.getUrlsPegas());
-        /*
         let objInstancia = await iniciaInstancia(id,browser, p.split(";"), urlBase,repetirUrl);
         id++;
 
         processoPegaLinks(browser, objInstancia, urlBase);
-        */
+        
     },
     Running: function(){
         let instanciaFiltrada =[];
@@ -101,10 +97,12 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
             if(!objInstancia["Rodando"]){
                 return;
             }
-
+            
             if(!objInstancia["Urls"].includes(objInstancia["UrlsPegas"][i])){
                 objInstancia["Urls"].push(objInstancia["UrlsPegas"][i]);
                 console.log("ID: " + objInstancia["Id"] + " - URL: " + objInstancia["UrlsPegas"][i]);
+                console.log("URLS --->", objInstancia["Urls"]);
+                console.log("PEGAS --->", objInstancia["UrlsPegas"]);
             
                 if(objInstancia["UrlsPegas"][i]){
         
@@ -115,6 +113,13 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                                 timeout: 300000
                             }).catch();
                             
+                            let b = await pegaLink(objInstancia["Page"],objInstancia["PalavrasChave"]);
+                            await b != undefined ? b.forEach((e,i,arr) =>{
+                                if(!objInstancia["UrlsPegas"].includes(b[i]) && b[i] != undefined){
+                                    objInstancia["UrlsPegas"].push(b[i])
+                                }
+                            }) : "";
+
                             objInstancia["UrlAtual"] = objInstancia["Page"].url();
 
                             if(objInstancia["Page"].url().search("404.aspx") >= 0 ){
@@ -129,14 +134,10 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                                 
                                 escreveNoLog(objError,"ObjetosLogNew");
                             }else{
-                                
                                 await pegaPagina(objInstancia);
-                                
-                                let b = await pegaLink(objInstancia["Page"],objInstancia["PalavrasChave"]);
-                                await b != undefined ? b.forEach((e,i,arr) => !objInstancia["UrlsPegas"].includes(b[i]) ? objInstancia["UrlsPegas"].push(b[i]) : "") : "";
-                                
                                 escreveNoLog(objInstancia["UrlsPegas"][i]+"\n", "LogLinksNew");
                             }
+                                
                         }catch(e){
                             //console.log("Erro de navegação: " + e);
                         }
