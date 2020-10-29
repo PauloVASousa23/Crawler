@@ -525,7 +525,6 @@
             (()=>{
                 getLog();
                 verificaCrawler(false);
-                getLinks();
             })();
 
             let arrErroMontado = [];
@@ -810,7 +809,11 @@
 
                             verificaCrawler(true);
                             
-                            getLog();
+                            
+                            setTimeout(()=>{
+                                getLog();
+                            },10000);
+                            
                         },
                         error: function(data){
                             console.log("Error: ",data);
@@ -920,7 +923,7 @@
                 });
 
                 $.get("/statusCrawler", function(data){
-                    if(data.Rodando){
+                    if(data.some(e=>e.Rodando)){
                         setInterval(() => {
                             $.get("/getLog", function(data){
                                 montaTela(data);

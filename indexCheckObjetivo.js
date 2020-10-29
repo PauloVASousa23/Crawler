@@ -17,7 +17,7 @@ module.exports = {
         console.log(funcoes);
         if(browser == null){
             browser = await pptr.launch({
-                headless: false,
+                headless: true,
                 executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
                 ignoreHTTPSErrors: true,
             });
@@ -146,18 +146,21 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                                 
                                 escreveNoLog(objError,"ObjetosLogNew");
                             }else{
-                                if(objInstancia.Funcoes["ConsoleError"] == "true"){
-                                    await pegaPagina(objInstancia);
-                                }
-
                                 
-                                if(objInstancia.Funcoes["Printscreen"] == "true"){
-                                    await objInstancia.Page.screenshot({
-                                        path: "screenshots/" + objInstancia.Pagina + Date.now() + ".jpg",
-                                        type: "jpeg",
-                                        fullPage: false
-                                    });
-                                }
+                            }
+
+                            if(objInstancia.Funcoes["ConsoleError"] == "true"){
+                                await pegaPagina(objInstancia);
+                            }
+                            console.log("sdasdasdasd ---->", objInstancia.Funcoes["Printscreen"]);
+                            if(objInstancia.Funcoes["Printscreen"] == "true"){
+                                
+                                let s = await objInstancia.Page.screenshot({
+                                    path: "screenshots/" + objInstancia.Pagina + Date.now() + ".jpg",
+                                    type: "jpeg",
+                                    fullPage: false
+                                });
+                                console.log("<------------ ",s);
                             }
                         }
 
@@ -186,7 +189,6 @@ async function pegaLink(page, palavrasChave){
         let result = await page.evaluate(async(palavrasChave) => {
             try {
                 let links = [];
-                console.log(document.querySelectorAll("a"));
 
                 document.querySelectorAll("a").forEach(e=>{
                     let href = e.href.toLowerCase();
