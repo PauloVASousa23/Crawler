@@ -11,7 +11,7 @@
                 font-family: cursive;
             }
             body{
-                background-color: #455892;
+                background: linear-gradient(340deg, #202c51, #1c3da2);
                 display: flex;
                 overflow: hidden;
                 flex-wrap: wrap;
@@ -355,7 +355,66 @@
                 width: 35%;
                 text-align: center;
             }
+
+            .modalLinks{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalLinksBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: 70vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #modalLinksBody{
+                overflow: auto;
+                height: calc(70vh - 100px);
+                padding: 30px;
+            }
+
+            .btnFecharModal {
+                position: absolute;
+                right: 20px;
+                bottom: 15px;
+                background-color: #616161;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #000;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .btnFecharModal:hover {
+                background-color: #504f4f;
+                border: none;
+            }
+
+            .fa-eye{
+                color: #4c8e62;
+                cursor: pointer;
+            }
+
+            .fa-eye:hover{
+                color: #3f6a03;
+            }
+
+            #modalLinksBody > ul > li {
+                word-break: break-all;
+            }
         </style>
+        <script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <aside>
@@ -409,7 +468,7 @@
                 <br/>
                 <label>
                     <input type="checkbox" id="ObterLinks" style="height: 18px;width: 18px;"> Obter links
-                </label>
+                </label> <i class="fas fa-eye" onclick="abreLog()"></i>
             </fieldset>
 
             <div style="display: flex;justify-content: center;align-items: center;">
@@ -447,8 +506,17 @@
             </div>
         </div>
         
-
         <div class="cardsStatus" id="cardsStatus">
+        </div>
+
+        <div class="modalLinks">
+            <div class="modalLinksBody">
+                <h3 style="text-align: center;margin-bottom: 10px;">Links acessados</h3>
+                <div id="modalLinksBody">
+
+                </div>                
+                <button class="btnFecharModal" id="btnFecharModal">Fechar</button>
+            </div>
         </div>
 
         <script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
@@ -457,6 +525,7 @@
             (()=>{
                 getLog();
                 verificaCrawler(false);
+                getLinks();
             })();
 
             let arrErroMontado = [];
@@ -477,6 +546,15 @@
                 filtrarPorDominio();
                 filtrarPorStatus();
             });
+
+            $("#btnFecharModal").on("click", function(){
+                $(".modalLinks").eq(0).fadeOut();
+            });
+
+            function abreLog(){
+                getLinks();
+                $(".modalLinks").eq(0).css("display","flex");
+            }
 
             function filtrarPorDominio(){
                 let dominio = $("#dominios").val();
@@ -849,10 +927,18 @@
                             });
                         }, 10000);
                     }
-                });
-                
+                });  
             }
 
+            function getLinks(){
+                $.get("/getLinks", function(data){
+                    console.log(data);
+                    let lista = "";
+                    data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
+                    $("#modalLinksBody").html("<ul>" + lista + "</ul>");
+                });
+            }
+            
             function stopCrawler(instancia){
                 $.ajax({ 
                         type: 'POST', 

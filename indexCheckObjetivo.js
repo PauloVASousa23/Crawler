@@ -149,13 +149,20 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                                 if(objInstancia.Funcoes["ConsoleError"] == "true"){
                                     await pegaPagina(objInstancia);
                                 }
+
+                                
+                                if(objInstancia.Funcoes["Printscreen"] == "true"){
+                                    await objInstancia.Page.screenshot({
+                                        path: "screenshots/" + objInstancia.Pagina + Date.now() + ".jpg",
+                                        type: "jpeg",
+                                        fullPage: false
+                                    });
+                                }
                             }
                         }
 
-                        console.log("--------> ", objInstancia.Funcoes);
-
                         if(objInstancia.Funcoes["ObterLinks"] == "true"){
-                            escreveNoLog(objInstancia.UrlsPegas[i]+"\n", "LogLinksNew");
+                            escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i]+"\"},\n", "LogLinksNew");
                         }
                                 
                     }catch(e){

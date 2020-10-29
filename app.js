@@ -38,6 +38,26 @@ app.get('/getLog', (req,res) => {
     }
 })
 
+app.get('/getLinks', (req,res) => {
+    try{
+        fs.access('LogLinksNew.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('LogLinksNew.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 3);
+                    var dt = JSON.parse("[" + data + "]");
+                    res.send(dt);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
 app.post('/startCrawler/', async(req,res) => {
     try{
         for(let i=0;i<req.body.simultaneos; i++){
