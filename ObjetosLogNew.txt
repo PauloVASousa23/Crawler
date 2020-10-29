@@ -27100,3 +27100,87 @@
 	"protocolo": "https",
 	"erros": ["PAGE NOT FOUND: https://www.unip.br/tvweb/video/index?id=427&aovivo=1&banda=0#"]
 },
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/comunicacao/%c2%b4http://www.institutolego.com.br%c2%b4",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/comunicacao/%c2%b4http://www.institutolego.com.br%c2%b4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/aunipinvesteemvoce/presencial/regulamento_enem.asp",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/aunipinvesteemvoce/presencial/regulamento_enem.asp"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/aunipinvesteemvoce/presencial/regulamento_traga_um_amigo.asp",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/aunipinvesteemvoce/presencial/regulamento_traga_um_amigo.asp"]
+},
+{
+	"dominio": "www.unip.br",
+	"pagina": "/presencial/comunicacao/%c2%b4http://www.institutolego.com.br%c2%b4",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://www.unip.br/presencial/comunicacao/%c2%b4http://www.institutolego.com.br%c2%b4"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/ensino/index.asp",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/ensino/index.asp"]
+},
+{
+	"dominio": "www.unip.br",
+	"pagina": "/servicos/aluno/suporte/ceppe/download/manual_pesquisa.doc",
+	"protocolo": "http",
+	"erros": ["PAGE NOT FOUND: http://www.unip.br/servicos/aluno/suporte/ceppe/download/manual_pesquisa.doc"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/pesquisa/download/comite_etica_animais/resolucao_normativa_n33_concea.pdf",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/pesquisa/download/comite_etica_animais/resolucao_normativa_n33_concea.pdf"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.prossiga.cnpq.br",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.prossiga.cnpq.br"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.textilia.net",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.textilia.net"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.rhodiapoliamida.com.br",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.rhodiapoliamida.com.br"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.dupont.com.br",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.dupont.com.br"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.modabrasil.com.br",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.modabrasil.com.br"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/links/www.webfashion.com.br",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/links/www.webfashion.com.br"]
+},
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/suporte/nidem/biblioteca/resumosistemadamoda.htm",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/servicos/aluno/suporte/nidem/biblioteca/resumosistemadamoda.htm"]
+},

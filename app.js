@@ -41,8 +41,8 @@ app.get('/getLog', (req,res) => {
 app.post('/startCrawler/', async(req,res) => {
     try{
         for(let i=0;i<req.body.simultaneos; i++){
-            await delay(2000);
-            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl);
+            await delay(2500);
+            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks});
         }
         
         res.send('Crawler iniciado!');

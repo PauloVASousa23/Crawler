@@ -12,6 +12,16 @@
             }
             body{
                 background-color: #455892;
+                display: flex;
+                overflow: hidden;
+                flex-wrap: wrap;
+            }
+
+            aside{
+                width: 30vw;
+                background-color: #fffffff0;
+                border-radius: 0px 50px 50px 0px;
+                padding: 20px;
             }
 
             .divHr{
@@ -56,7 +66,7 @@
             }
 
             .container{
-                padding:30px;
+                padding:0px 30px 30px 30px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -79,9 +89,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #fff;
                 font-size: 24px;
                 box-shadow: inset 10px 10px 10px 10px #25366a;
+                color: #fff;
             }
 
             .content{
@@ -197,7 +207,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                color: #fff;
                 position: relative;
             }
             .inputUrl > label > div{
@@ -207,11 +216,12 @@
             input {
                 color: #000;
                 padding: 5px 20px;
-                width: 300px;
+                width: 22vw;
                 height: 40px;
                 border-radius: 100px;
                 border: none;
                 outline: none;
+                box-shadow: 2px 1px 6px -3px rgba(0,0,0,0.7);
             }
 
             .hintUrl{
@@ -314,9 +324,9 @@
             .filtros > div{
                 display: flex;
                 flex-direction: column;
-                color: #fff;
                 margin: 0px 10px;
                 align-items: flex-start;
+                color: #fff;
             }
 
             select{
@@ -329,91 +339,114 @@
                 margin-right: 25px;
             }
 
-            #palavrasChaves{
-                width: 400px;
-            }
-
             #numCrawlers::-webkit-outer-spin-button,
             #numCrawlers::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
             }
+
+            fieldset{
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            legend{
+                width: 35%;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <h2>Crawler</h2>
-        <div class="divHr">
-            <hr class="hr20"/>
-        </div>
-        <br/>
-        <div class="inputUrl">
-            
-            <div class="protocolo">
-                <select id="protocolo">
-                    <option>https</option>
-                    <option>http</option>
-                </select>
-            </div>
-            <label>
-                <div>
-                    URL base:
+        <aside>
+            <div class="inputUrl">
+                
+                <label>
                     <div>
-                        <div class="hintUrl">hint</div>
-                        <input type="text" id="urlBase"></input>
+                        URL base:
+                        <div>
+                            <div class="hintUrl">hint</div>
+                            <input type="text" id="urlBase"></input>
+                        </div>
                     </div>
+                </label>
+                
+            </div>
+            <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                Palavras chaves (Separe por ';'):
+                <div>
+                    <div class="hintUrl">hint</div>
+                    <input type="text" id="palavrasChaves"></input>
                 </div>
             </label>
+
+            <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                Exceções (Separe por ';'):
+                <div>
+                    <input type="text" id="palavrasExcecao"></input>
+                </div>
+            </label>
+            <div style="display: flex;justify-content: center;align-items: center;padding: 10px;">
+                <label>
+                    Iniciar <input type="number" maxlength="15" max="15" id="numCrawlers" style="width: 60px;text-align: center;" value="1"> Crawler simultaneo
+                </label>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;padding: 10px;">
+                <label>
+                    <input type="checkbox" id="repetirUrl" style="height: 18px;width: 18px;"> Não repetir urls do Crawler anterior
+                </label>
+            </div>
+
+            <fieldset>
+                <legend>Funções</legend>
+                <label>
+                    <input type="checkbox" id="ConsoleErros" style="height: 18px;width: 18px;"> Console errors
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="Printscreen" style="height: 18px;width: 18px;"> Printscreen
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="ObterLinks" style="height: 18px;width: 18px;"> Obter links
+                </label>
+            </fieldset>
+
+            <div style="display: flex;justify-content: center;align-items: center;">
+                <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
+            </div>
+            <br/>
             
-        </div>
-        <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;color: #fff;">
-            Palavras chaves nas URL para acessar (Separe por ponto e virgula):
-            <div>
-                <div class="hintUrl">hint</div>
-                <input type="text" id="palavrasChaves"></input>
+        </aside>
+        
+        <div style="overflow: auto;height: 100vh;width: 70vw;">
+            <h2 id="qtd">
+            </h2>
+            <div class="filtros">
+                <div>
+                    Status:
+                    <select id="status">
+                        <option default>Selecione</option>
+                        <option>Todos</option>
+                        <option>Console</option>
+                        <option>Request</option>
+                        <option>Response</option>
+                        <option>Page error</option>
+                    </select>
+                </div>
+                <div>
+                    Dominio:
+                    <select id="dominios">
+                        <option default>Selecione</option>
+                        <option>Todos</option>
+                    </select>
+                </div>
+                <button class="btnFiltrar" id="btnFiltrar"><i class="fas fa-search"></i> Filtrar</button>
             </div>
-        </label>
-        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
-            <label>
-                Iniciar <input type="number" maxlength="15" max="15" id="numCrawlers" style="width: 60px;text-align: center;" value="1"> Crawler simultaneo
-            </label>
-        </div>
-        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
-            <label>
-                <input type="checkbox" id="repetirUrl" style="height: 18px;width: 18px;"> Não repetir urls do Crawler anterior
-            </label>
-        </div>
-        <div style="display: flex;justify-content: center;align-items: center;">
-            <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
-        </div>
-        <br/>
-        <h2 id="qtd">
-
-        </h2>
-        <div class="filtros">
-            <div>
-                Status:
-                <select id="status">
-                    <option default>Selecione</option>
-                    <option>Todos</option>
-                    <option>Console</option>
-                    <option>Request</option>
-                    <option>Response</option>
-                    <option>Page error</option>
-                </select>
+            <div class="container" id="itemList">
             </div>
-            <div>
-                Dominio:
-                <select id="dominios">
-                    <option default>Selecione</option>
-                    <option>Todos</option>
-                </select>
-            </div>
-            <button class="btnFiltrar" id="btnFiltrar"><i class="fas fa-search"></i> Filtrar</button>
         </div>
-
-        <div class="container" id="itemList">
-
-        </div>
+        
 
         <div class="cardsStatus" id="cardsStatus">
         </div>
@@ -676,20 +709,25 @@
             function startCrawler(){
                 let urlBase = $("#urlBase").val();
                 let palavrasChave = $("#palavrasChaves").val();
-                let protocolo = $("#protocolo").val();
-                let repetirUrl = $("#repetirUrl").val() == "on";
+                //let protocolo = $("#protocolo").val();
+                let repetirUrl = $("#repetirUrl:checked").val() == "on";
                 let numCrawlers = $("#numCrawlers").val();
-                console.log("asdasdasdasdasdad: " + numCrawlers);
-                
+                let excecoes = $("#palavrasExcecao").val();
+
+                //Funções
+                let consoleError = $("#ConsoleErros:checked").val() == "on";
+                let printscreen = $("#Printscreen:checked").val() == "on";
+                let obterLinks = $("#ObterLinks:checked").val() == "on";
+
                 if(!urlBase.includes("http") || !urlBase.includes("://")){
-                    urlBase = protocolo + "://" + urlBase;
+                    urlBase = "https://" + urlBase;
                 }
                 
                 if($("#urlBase").val() != null && $("#urlBase").val().length >= 6){
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers}, 
+                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks}, 
                         success: function (data) {
 
                             verificaCrawler(true);

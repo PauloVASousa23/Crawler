@@ -1599,3 +1599,17 @@
 [1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
 [1015/171415.917:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1015/174101.310:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/161745.640:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/161825.775:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1016/161825.776:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1016/161825.776:ERROR:exception_snapshot_win.cc(99)] thread ID 75200 not found in process
+[1016/162812.733:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/164207.178:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/171009.248:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-dz2WXf\Crashpad\attachments\a8023778-e05d-488e-955f-c0d4eaefd365: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/172711.198:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/175118.090:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-xr1ytP\Crashpad\attachments\a9870d98-a9e4-4db6-b8d8-88b31928a06d: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/181920.662:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1019/153624.249:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1026/153913.605:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1028/173956.494:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1028/185405.479:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
