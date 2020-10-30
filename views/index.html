@@ -22,6 +22,17 @@
                 background-color: #fffffff0;
                 border-radius: 0px 50px 50px 0px;
                 padding: 20px;
+                position: relative;
+                left: 0px;
+                transition: 1s;
+                filter: drop-shadow(2px 4px 6px black);
+            }
+
+            .conteudo{
+                overflow: auto;
+                height: 100vh;
+                width: 70vw;
+                transition: 1s;
             }
 
             .divHr{
@@ -167,7 +178,7 @@
             .btnCrawler{
                 margin: 0px 15px;
                 display: block;
-                background-color: #6ebd88;
+                background-color: #5db379;
                 padding: 10px 20px;
                 border: none;
                 border-radius: 10px;
@@ -180,8 +191,12 @@
             }
 
             .btnCrawler:not([disabled]):hover{
+                background-color:#569e6e;
+            }
+
+            .btnCrawler:not([disabled]):hover:active{
                 margin-top: 4px;
-                border-bottom: 0px solid #4c8e62;
+                border-bottom: 0px solid #569e6e;
             }
 
             .btnCrawler:disabled {
@@ -270,6 +285,19 @@
                 background-color: #afaa52;
             }
 
+            .btnInstancias {
+                padding: 10px;
+                border: none;
+                border-radius: 15px 15px 0px 0px;
+                font-size: 16px;
+                outline: none !important;
+                cursor: pointer;
+            }
+
+            .btnInstancias:hover{
+                background-color: #d2d3d7;
+            }
+
             .cardStatusCrawler{
                 position: relative;
                 background-color: #83d69a;
@@ -278,15 +306,27 @@
                 border: 2px solid #fff;
                 box-shadow: 0px 0px 10px 2px #000;
                 margin-top: 25px;
-                margin-right: 25px;
+                margin-right: 15px;
+                margin-left: 15px;
             }
 
-            .cardsStatus{
+            .cardsStatus {
                 display: flex;
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: calc(100vh - 42px);
+                right: 20px;
                 flex-direction: column;
+                background-color: #ffffff80;
+                border-radius: 15px 15px 0px 0px;
+                height: 100vh;
+                transition: 1s;
+                min-width: 291px;
+            }
+
+            #cardsStatus{
+                overflow: auto;
+                height: calc(100vh - 93px);
+                padding-bottom: 30px;
             }
 
             .acao{
@@ -309,6 +349,14 @@
 
             .time{
                 margin-right: 20px;
+            }
+
+            .funcoes{
+                padding-top: 10px;
+            }
+            
+            .funcoes > i {
+                margin-right: 10px;
             }
 
             .disabled{
@@ -394,10 +442,15 @@
                 font-weight: bolder;
                 font-size: 16px;
                 cursor: pointer;
+                outline: none !important;
             }
 
             .btnFecharModal:hover {
-                background-color: #504f4f;
+                background-color: #484848;
+            }
+
+            .btnFecharModal:hover:active {
+                background-color: #484848;
                 border: none;
             }
 
@@ -413,11 +466,34 @@
             #modalLinksBody > ul > li {
                 word-break: break-all;
             }
+
+            .btnControleCrawler{
+                position: absolute;
+                right: -114px;
+                top: 115px;
+                padding: 10px 20px;
+                transform: rotate(90deg);
+                border: none;
+                background-color: #f0f0f1;
+                border-radius: 15px 15px 0px 0px;
+                font-size: 16px;
+                outline: none !important;
+                cursor: pointer;
+            }
+
+            .btnControleCrawler:hover{
+                background-color: #d2d3d7;
+            }
+
+            .asideHidden{
+                left: -500px;
+            }
         </style>
         <script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <aside>
+            <button class="btnControleCrawler">Controle do Crawler</button>
             <div class="inputUrl">
                 
                 <label>
@@ -469,6 +545,10 @@
                 <label>
                     <input type="checkbox" id="ObterLinks" style="height: 18px;width: 18px;"> Obter links
                 </label> <i class="fas fa-eye" onclick="abreLog()"></i>
+                <br/>
+                <label>
+                    <input type="checkbox" id="ObterLinksRepetidos" style="height: 18px;width: 18px;"> Obter links repetidos
+                </label>
             </fieldset>
 
             <div style="display: flex;justify-content: center;align-items: center;">
@@ -478,7 +558,7 @@
             
         </aside>
         
-        <div style="overflow: auto;height: 100vh;width: 70vw;">
+        <div class="conteudo">
             <h2 id="qtd">
             </h2>
             <div class="filtros">
@@ -506,7 +586,11 @@
             </div>
         </div>
         
-        <div class="cardsStatus" id="cardsStatus">
+        <div class="cardsStatus">
+            <button class="btnInstancias">Instancias</button>
+            <div id="cardsStatus">
+
+            </div>      
         </div>
 
         <div class="modalLinks">
@@ -548,6 +632,29 @@
 
             $("#btnFecharModal").on("click", function(){
                 $(".modalLinks").eq(0).fadeOut();
+            });
+
+            $(".btnControleCrawler").eq(0).on("click",function(){
+                let $aside = $("aside");
+                let $conteudo = $(".conteudo").eq(0);
+                if($aside.css("left") == "0px"){
+                    $aside.css("left","-410px");
+                    $conteudo.css("width","100vw");
+                    $conteudo.css("margin-left","-410px");
+                }else{
+                    $aside.css("left","0px");
+                    $conteudo.css("width","70vw");
+                    $conteudo.css("margin-left","0px");
+                }
+            });
+
+            $(".btnInstancias").eq(0).on("click",function(){
+                let $conteudo = $(".cardsStatus").eq(0);
+                if($conteudo.css("top") == "50px"){
+                    $conteudo.css("top","calc(100vh - 42px)");
+                }else{
+                    $conteudo.css("top","50px");
+                }
             });
 
             function abreLog(){
@@ -795,6 +902,7 @@
                 let consoleError = $("#ConsoleErros:checked").val() == "on";
                 let printscreen = $("#Printscreen:checked").val() == "on";
                 let obterLinks = $("#ObterLinks:checked").val() == "on";
+                let obterLinksRepetidos = $("#ObterLinksRepetidos:checked").val() == "on";
 
                 if(!urlBase.includes("http") || !urlBase.includes("://")){
                     urlBase = "https://" + urlBase;
@@ -804,7 +912,7 @@
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks}, 
+                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks,ObterLinksRepetidos: obterLinksRepetidos}, 
                         success: function (data) {
 
                             verificaCrawler(true);
@@ -852,13 +960,18 @@
                         if(data.length > 0){
                             $("#cardsStatus").html("");
                             data.map(e=>{
+                                let consoleError = e.Funcoes.ConsoleError == "true" ? "<i class='fas fa-bug'></i>" : "";
+                                let printscreen = e.Funcoes.Printscreen == "true" ? "<i class='fas fa-print'></i>" : "";
+                                let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link'></i>" : "";
+                                let obterLinksRepetidos = e.Funcoes.ObterLinksRepetidos == "true" ? "<i class='fas fa-redo-alt'></i>" : "";
+
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
-                                    <div class="pagina">
-                                        ` + e.Pagina + `
-                                    </div>
                                     <div style="display: flex;">
                                         <div>
+                                            <div class="pagina">
+                                                ` + e.Pagina + `
+                                            </div>
                                             <div class="statusHeader">
                                                 Status: <label id="rodando` + e.Id + `"></label>
                                             </div>
@@ -870,20 +983,38 @@
                                                 <div id="tempo` + e.Id + `">
                                                 </div>
                                             </div>
+                                            <div class="funcoes">
+                                                `
+                                                +
+                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos
+                                                +
+                                                `
+                                            </div>
                                         </div>
                                         <div style="display: flex;justify-content: center;align-items: center;">
                                             <div class="acao">
                                                 <button onclick="deletarCrawler(` + e.Id + `)"><i class="fas fa-trash"></i></button>
                                                 <button onclick="stopCrawler(` + e.Id + `)"><i class="fas fa-stop"></i></button>
+                                                <button id='pausar` + e.Id + `' onclick="pausarCrawler(` + e.Id + `)"><i class="fas fa-pause"></i></button>
+                                                <button id='continuar` + e.Id + `' onclick="continuarCrawler(` + e.Id + `)" style='display:none;'><i class="fas fa-play"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 `);
                             });
+
+                            let $conteudo = $(".cardsStatus").eq(0);
+                            if($conteudo.css("top") == "50px"){
+                                $conteudo.css("top","calc(100vh - 42px)");
+                            }else{
+                                $conteudo.css("top","50px");
+                            }
+
                             myStatusPrimeiraInstancia = setInterval(() => {
                                 $.get("/statusCrawler", function(data){
                                     statusCrawler(data);
+                                    $(".btnInstancias").eq(0).html("Instancias - " + data.length);
                                 });
                             }, 1000);
                         }
@@ -909,9 +1040,9 @@
                     let montaTempo = hora + ":" + min + ":" + sec;
                     $("#tempo" + e.Id).html(montaTempo);
                     $("#rodando" + e.Id).html(e.Rodando ? "Rodando" : "Parado");
-                    $("#status" + e.Id).css("background-color","#83d69a");
-                    e.Rodando ? "" : $("#status" + e.Id).css("background-color","#e68b8b");
-
+                    $("#rodando" + e.Id).html(e.Pausado ? "Pausado" : e.Rodando ? "Rodando" : "Parado");
+                    
+                    e.Rodando ? e.Pausado ? $("#status" + e.Id).css("background-color","#dfde80") : $("#status" + e.Id).css("background-color","#83d69a") : $("#status" + e.Id).css("background-color","#e68b8b");
                 });
 
             }
@@ -963,6 +1094,40 @@
                         data: { instancia: instancia}, 
                         success: function (data) {
                             $("#status" + instancia).remove();                
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+
+            function pausarCrawler(instancia){
+                $("#pausar"+instancia).css("display","none");
+                $("#continuar"+instancia).css("display","block");
+
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/pausarCrawler', 
+                        data: { instancia: instancia}, 
+                        success: function (data) {
+                            
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+
+            function continuarCrawler(instancia){
+                $("#pausar"+instancia).css("display","block");
+                $("#continuar"+instancia).css("display","none");
+
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/continuarCrawler', 
+                        data: { instancia: instancia}, 
+                        success: function (data) {
+                            
                         },
                         error: function(data){
                             console.log("Error: ",data);

@@ -8,6 +8,8 @@ let id = 0;
 let urlsAcessadas = [];
 let urlsPegas = [];
 let urlsException = [];
+let urlsLog = [];
+let pause = true;
 
 module.exports = {
     Crawler: async function Crawler (urlBase,p,repetirUrl,urlException,funcoes) {
@@ -17,7 +19,7 @@ module.exports = {
         console.log(funcoes);
         if(browser == null){
             browser = await pptr.launch({
-                headless: false,
+                headless: true,
                 executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
                 ignoreHTTPSErrors: true,
             });
@@ -36,10 +38,11 @@ module.exports = {
     },
     Running: function(){
         let instanciaFiltrada =[];
-        instancia.map(e=>instanciaFiltrada.push({Id:e["Id"],Rodando:e["Rodando"],Tempo:e["Tempo"], Pagina: e["Pagina"]}));
+        instancia.map(e=>instanciaFiltrada.push({Id:e["Id"],Rodando:e["Rodando"],Tempo:e["Tempo"], Pagina: e["Pagina"], Funcoes: e["Funcoes"], Pausado: e["Pausar"]}));
         return instanciaFiltrada;
     },
     ParaCrawler: function(i){
+
         if(instancia.length > 0){
             instancia.map((e,j)=>{
                 if(e.Id == i){
@@ -51,6 +54,7 @@ module.exports = {
                 }
             });
         }
+
     },
     LimpaInstancia: function(i){
         let instanciaFiltrada =[];
@@ -61,14 +65,39 @@ module.exports = {
         });
 
         instancia = instanciaFiltrada;
+    },
+    PausarCrawler: function(i){
+
+        if(instancia.length > 0){
+            instancia.map((e,j)=>{
+                if(e.Id == i){
+                    clearInterval(instancia[j]["IntervalTempo"]);
+                    instancia[j]["Pausar"] = true;
+                }
+            });
+        }
+
+    },
+    ContinuarCrawler: function(i){
+
+        if(instancia.length > 0){
+            instancia.map((e,j)=>{
+                if(e.Id == i){
+                    instancia[j]["IntervalTempo"] = setInterval(()=>{
+                        instancia[j]["Tempo"]++;
+                    },1000);
+                    instancia[j]["Pausar"] = false;
+                }
+            });
+        }
+
     }
-    
 }
 
 async function iniciaInstancia(idInstancia,browser, palavrasChave,url,repetirUrl, funcoes){
     let removeHttp = url.substring( url.indexOf("://")+3);
     let urlDomain = removeHttp.indexOf("/") >= 0 ? removeHttp.substring(0, removeHttp.indexOf("/")) : removeHttp;
-    let objeto = {Id: idInstancia,Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChave, Pagina: urlDomain, Urls: repetirUrl ? urlsAcessadas : [], UrlsPegas: repetirUrl ? urlsPegas : [], UrlAtual: "",Funcoes: funcoes};
+    let objeto = {Id: idInstancia,Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChave, Pagina: urlDomain, Urls: repetirUrl ? urlsAcessadas : [], UrlsPegas: repetirUrl ? urlsPegas : [], UrlAtual: "", UrlsNoLog:repetirUrl ? urlsLog : [],Funcoes: funcoes, Pausar: false};
     instancia.push(objeto);
     return objeto;
 }
@@ -101,76 +130,88 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
 
         let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
         await b != undefined ? b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "") : "";
-
-        let temp = 0;
         
         for(let i = 0; i<=objInstancia.UrlsPegas.length; i++){
-            temp = i;
+
+            
+            while(objInstancia.Pausar){
+                await delay(1000);
+            }
+
             if(!objInstancia.Rodando){
                 return;
             }
-            
-            if(!objInstancia.Urls.includes(objInstancia.UrlsPegas[i])){
-                
-                objInstancia.Urls.push(objInstancia.UrlsPegas[i]);
-                
-                if(objInstancia.UrlsPegas[i] != undefined){
 
-                    try{
-                        await objInstancia.Page.goto(objInstancia.UrlsPegas[i].split("__|__")[1], {
-                            waitUntil: "load",
-                            timeout: 300000
-                        }).catch(e=> console.log(""));
-
-                        let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
-
-                        await b != b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "");
-
-                        objInstancia.UrlAtual = objInstancia.Page.url();
-
-                        console.log("ID: " + objInstancia.Id + " - URL: " + objInstancia.UrlsPegas[i].split("__|__")[1]);
-
-                        let id = "";
-
-                        
-                        if(objInstancia.Funcoes["Printscreen"] == "true"){
-                            id = objInstancia.Pagina + Date.now()
-                            await delay(1000);
-                            await objInstancia.Page.screenshot({
-                                path: "screenshots/" + id + ".jpg",
-                                type: "jpeg",
-                                fullPage: false
-                            });
-                        }
-
-                        if(!urlsException.some(e=>objInstancia.UrlsPegas[i].includes(e))){
+            if(objInstancia.UrlsPegas[i] != undefined){
+                            
+                if(!objInstancia.Urls.includes(objInstancia.UrlsPegas[i].split("__|__")[1])){
                     
-                            if(objInstancia.Page.url().search("404.aspx") >= 0 ){
-                                let url = objInstancia.UrlsPegas[i];
-            
-                                let removeHttp = url.substring( url.indexOf("://")+3);
-                                let urlDomain = removeHttp.substring(0, removeHttp.indexOf("/"));
-                                let urlContent = removeHttp.substring(removeHttp.indexOf("/"));
-                                let protocolo = url.substring(0, url.indexOf("://"));
+                    objInstancia.Urls.push(objInstancia.UrlsPegas[i].split("__|__")[1]);
+                    
+                    if(objInstancia.UrlsPegas[i] != undefined){
 
-                                let objError = {dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: ["PAGE NOT FOUND: " + url]};
-                                
-                                escreveNoLog(objError,"ObjetosLogNew");
-                            }else{
-                                if(objInstancia.Funcoes["ConsoleError"] == "true"){
-                                    await pegaPagina(objInstancia);
+                        try{
+                            await objInstancia.Page.goto(objInstancia.UrlsPegas[i].split("__|__")[1], {
+                                waitUntil: "load",
+                                timeout: 300000
+                            }).catch(e=> console.log(""));
+
+                            let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
+
+                            await b != b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "");
+
+                            //objInstancia.UrlAtual = objInstancia.Page.url();
+
+                            console.log("ID: " + objInstancia.Id + " - URL: " + objInstancia.UrlsPegas[i].split("__|__")[1]);
+
+                            let id = "";
+
+                            if(!urlsException.some(e=>objInstancia.UrlsPegas[i].includes(e))){
+                        
+                                if(objInstancia.Page.url().search("404.aspx") >= 0 ){
+                                    let url = objInstancia.UrlsPegas[i];
+                
+                                    let removeHttp = url.substring( url.indexOf("://")+3);
+                                    let urlDomain = removeHttp.substring(0, removeHttp.indexOf("/"));
+                                    let urlContent = removeHttp.substring(removeHttp.indexOf("/"));
+                                    let protocolo = url.substring(0, url.indexOf("://"));
+
+                                    let objError = {dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: ["PAGE NOT FOUND: " + url]};
+                                    
+                                    escreveNoLog(objError,"ObjetosLogNew");
+                                }else{
+                                    if(objInstancia.Funcoes["Printscreen"] == "true"){
+                                        id = objInstancia.Pagina + Date.now()
+                                        await delay(1000);
+                                        await objInstancia.Page.screenshot({
+                                            path: "screenshots/" + id + ".jpg",
+                                            type: "jpeg",
+                                            fullPage: false
+                                        });
+                                    }
+                                    if(objInstancia.Funcoes["ConsoleError"] == "true"){
+                                        await pegaPagina(objInstancia);
+                                    }
                                 }
                             }
-                        }
 
-                        if(objInstancia.Funcoes["ObterLinks"] == "true"){
-                            escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
+                            if(objInstancia.Funcoes["ObterLinksRepetidos"] == "true"){
+                                if(objInstancia.Funcoes["ObterLinks"] == "true"){
+                                    escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
+                                }
+                            }else if(objInstancia.Funcoes["ObterLinks"] == "true"){
+                                if(!objInstancia.UrlsNoLog.includes(objInstancia.UrlsPegas[i].split("__|__")[1])){
+                                    objInstancia.UrlsNoLog.push(objInstancia.UrlsPegas[i].split("__|__")[1]);
+                                    escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
+                                }
+                            }
+                            
+                        }catch(e){
+                            //console.log("Erro de navegação: ");
                         }
-                                
-                    }catch(e){
-                        //console.log("Erro de navegação: ");
                     }
                 }
+
             }
         }
         await delay(5000);
@@ -201,28 +242,6 @@ async function pegaLink(page, palavrasChave){
                         }
                     }
                 });
-
-                /*
-                $("a").map((e)=>{
-                        let href = $("a")[e].href.toLowerCase();
-
-                        href = href.slice(-1).includes("/") ? href.replace(/.$/, '') : href ;
-                        if(href.search("unip.br/video/index") >=0){
-                            href = href.substring(0,href.indexOf("unip.br")+7) + "/tvweb" + href.substring(href.indexOf("unip.br")+7)
-                        }
-                           
-                        let bool=false;
-                        
-                        palavrasChave.map((e)=>{href.search(e) >= 0 && e != "" ? bool=true:"";});
-
-                        if(bool){
-                            if(!links.includes(href)){
-                                links.push(href);
-                            }
-                        }
-                    }
-                );
-                */
 
                 return links;
             } catch (e) {

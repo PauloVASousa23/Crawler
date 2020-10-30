@@ -1,12 +1,12 @@
 {
-	"dominio": "www.instagram.com",
-	"pagina": "/_unipoficial/",
+	"dominio": "unip.br",
+	"pagina": "/presencial/",
 	"protocolo": "https",
-	"erros": ["REQUEST: net::ERR_ABORTED https://www.facebook.com/x/oauth/status?client_id=124024574287414&input_token&origin=1&redirect_uri=https%3A%2F%2Fwww.instagram.com%2F_unipoficial%2F&sdk=joey&wants_cookie_data=true"]
+	"erros": ["PAGEERROR: TypeError: Cannot read property 'length' of undefined at preencheinfos (https://unip.br/presencial/central/:798:52) at https://unip.br/presencial/central/:769:3"]
 },
 {
-	"dominio": "www.linkedin.com",
-	"pagina": "/school/unip/",
+	"dominio": "unip.br",
+	"pagina": "/presencial/ensino/pos_graduacao/strictosensu/index.aspx",
 	"protocolo": "https",
-	"erros": ["CONSOLE: [Report Only] Refused to connect to 'https://accounts.google.com/gsi/status?client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&as=G0Dv%2Bqei7xKZJPZqbX7eBA' because it violates the following Content Security Policy directive: 'connect-src 'self' www.linkedin.com www.google-analytics.com https://dpm.demdex.net/id lnkd.demdex.net blob: https://linkedin.sc.omtrdc.net/b/ss/ static.licdn.com static-exp1.licdn.com static-exp2.licdn.com static-exp3.licdn.com'."]
+	"erros": ["PAGEERROR: SyntaxError: Unexpected token u in JSON at position 0 at JSON.parse (<anonymous>) at <anonymous>:1:371 at https://www.googletagmanager.com/gtm.js?id=GTM-PWP7NP:1332:414 at HTMLScriptElement.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-PWP7NP:1333:118)"]
 },

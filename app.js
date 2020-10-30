@@ -62,7 +62,7 @@ app.post('/startCrawler/', async(req,res) => {
     try{
         for(let i=0;i<req.body.simultaneos; i++){
             await delay(2500);
-            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks});
+            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks,ObterLinksRepetidos: req.body.ObterLinksRepetidos});
         }
         
         res.send('Crawler iniciado!');
@@ -99,6 +99,24 @@ app.post('/deleteCrawler/', (req,res) => {
         console.log(err);
     }
     res.send("Deletado com sucesso!");
+});
+
+app.post('/pausarCrawler/', (req,res) => {
+    try{
+        Crawler.PausarCrawler(req.body.instancia);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
+});
+
+app.post('/continuarCrawler/', (req,res) => {
+    try{
+        Crawler.ContinuarCrawler(req.body.instancia);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
 });
 
 function delay(time) {
