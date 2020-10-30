@@ -17,7 +17,7 @@ module.exports = {
         console.log(funcoes);
         if(browser == null){
             browser = await pptr.launch({
-                headless: true,
+                headless: false,
                 executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
                 ignoreHTTPSErrors: true,
             });
@@ -75,8 +75,6 @@ async function iniciaInstancia(idInstancia,browser, palavrasChave,url,repetirUrl
 
 async function processoPegaLinks(browser, objInstancia, urlBase){
     try{
-        console.log("--> ", objInstancia.Funcoes["ObterLinks"]);
-        console.log("> ", typeof(objInstancia.Funcoes["ObterLinks"]));
         objInstancia.Page = await browser.newPage();
 
         objInstancia.IntervalTempo = setInterval(()=>{
@@ -119,7 +117,7 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                 if(objInstancia.UrlsPegas[i] != undefined){
 
                     try{
-                        await objInstancia.Page.goto(objInstancia.UrlsPegas[i], {
+                        await objInstancia.Page.goto(objInstancia.UrlsPegas[i].split("__|__")[1], {
                             waitUntil: "load",
                             timeout: 300000
                         }).catch(e=> console.log(""));
@@ -130,7 +128,20 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
 
                         objInstancia.UrlAtual = objInstancia.Page.url();
 
-                        console.log("ID: " + objInstancia.Id + " - URL: " + objInstancia.UrlsPegas[i]);
+                        console.log("ID: " + objInstancia.Id + " - URL: " + objInstancia.UrlsPegas[i].split("__|__")[1]);
+
+                        let id = "";
+
+                        
+                        if(objInstancia.Funcoes["Printscreen"] == "true"){
+                            id = objInstancia.Pagina + Date.now()
+                            await delay(1000);
+                            await objInstancia.Page.screenshot({
+                                path: "screenshots/" + id + ".jpg",
+                                type: "jpeg",
+                                fullPage: false
+                            });
+                        }
 
                         if(!urlsException.some(e=>objInstancia.UrlsPegas[i].includes(e))){
                     
@@ -146,26 +157,14 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                                 
                                 escreveNoLog(objError,"ObjetosLogNew");
                             }else{
-                                
-                            }
-
-                            if(objInstancia.Funcoes["ConsoleError"] == "true"){
-                                await pegaPagina(objInstancia);
-                            }
-                            console.log("sdasdasdasd ---->", objInstancia.Funcoes["Printscreen"]);
-                            if(objInstancia.Funcoes["Printscreen"] == "true"){
-                                
-                                let s = await objInstancia.Page.screenshot({
-                                    path: "screenshots/" + objInstancia.Pagina + Date.now() + ".jpg",
-                                    type: "jpeg",
-                                    fullPage: false
-                                });
-                                console.log("<------------ ",s);
+                                if(objInstancia.Funcoes["ConsoleError"] == "true"){
+                                    await pegaPagina(objInstancia);
+                                }
                             }
                         }
 
                         if(objInstancia.Funcoes["ObterLinks"] == "true"){
-                            escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i]+"\"},\n", "LogLinksNew");
+                            escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
                         }
                                 
                     }catch(e){
@@ -174,7 +173,6 @@ async function processoPegaLinks(browser, objInstancia, urlBase){
                 }
             }
         }
-        console.log( temp + " -------------> ", objInstancia.UrlsPegas);
         await delay(5000);
         objInstancia["Page"].close();
         
@@ -191,15 +189,15 @@ async function pegaLink(page, palavrasChave){
                 let links = [];
 
                 document.querySelectorAll("a").forEach(e=>{
-                    let href = e.href.toLowerCase();
+                    let href = e.href;
 
                     let bool=false;
 
-                    palavrasChave.map((e)=>{href.search(e) >= 0 && e != "" ? bool=true:"";});
+                    palavrasChave.map((e)=>{href.toLowerCase().search(e.toLowerCase()) >= 0 && e != "" ? bool=true:"";});
 
                     if(bool){
                         if(!links.includes(href)){
-                            links.push(href);
+                            links.push(window.location.href + "__|__" + href);
                         }
                     }
                 });
