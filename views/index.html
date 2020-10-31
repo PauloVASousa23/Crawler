@@ -359,6 +359,12 @@
                 margin-right: 10px;
             }
 
+            .idInstancia {
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
+
             .disabled{
                 display: none;
             }
@@ -494,6 +500,7 @@
     <body>
         <aside>
             <button class="btnControleCrawler">Controle do Crawler</button>
+            
             <div class="inputUrl">
                 
                 <label>
@@ -553,6 +560,11 @@
 
             <div style="display: flex;justify-content: center;align-items: center;">
                 <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
+            </div>
+            <div style="text-align: center;margin-top: 10px;">
+                <label>
+                    <input type="checkbox" id="mostrarBrowser" style="height: 18px;width: 18px;"> Mostrar browser
+                </label>
             </div>
             <br/>
             
@@ -891,6 +903,7 @@
             }
 
             function startCrawler(){
+                let mostrarBrowser = $("#mostrarBrowser:checked").val() == "on";
                 let urlBase = $("#urlBase").val();
                 let palavrasChave = $("#palavrasChaves").val();
                 //let protocolo = $("#protocolo").val();
@@ -912,7 +925,7 @@
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks,ObterLinksRepetidos: obterLinksRepetidos}, 
+                        data: { MostrarBrowser: mostrarBrowser,baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks,ObterLinksRepetidos: obterLinksRepetidos}, 
                         success: function (data) {
 
                             verificaCrawler(true);
@@ -967,6 +980,7 @@
 
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
+                                    <label class='idInstancia'>` + e.Id + `</label>
                                     <div style="display: flex;">
                                         <div>
                                             <div class="pagina">
@@ -1007,8 +1021,6 @@
                             let $conteudo = $(".cardsStatus").eq(0);
                             if($conteudo.css("top") == "50px"){
                                 $conteudo.css("top","calc(100vh - 42px)");
-                            }else{
-                                $conteudo.css("top","50px");
                             }
 
                             myStatusPrimeiraInstancia = setInterval(() => {

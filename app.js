@@ -62,7 +62,7 @@ app.post('/startCrawler/', async(req,res) => {
     try{
         for(let i=0;i<req.body.simultaneos; i++){
             await delay(2500);
-            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks,ObterLinksRepetidos: req.body.ObterLinksRepetidos});
+            Crawler.Crawler(req.body.MostrarBrowser,req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks,ObterLinksRepetidos: req.body.ObterLinksRepetidos});
         }
         
         res.send('Crawler iniciado!');

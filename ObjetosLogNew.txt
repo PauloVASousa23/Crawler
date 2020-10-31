@@ -226,3 +226,9 @@
 	"protocolo": "https",
 	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/comunicacao/agenda.asp__|__https://unip.br/presencial/comunicacao/%C2%B4http://www.institutolego.com.br%C2%B4"]
 },
+{
+	"dominio": "unip.br",
+	"pagina": "/presencial/comunicacao/agenda.asp__|__https://unip.br/presencial/comunicacao/%C2%B4http://www.institutolego.com.br%C2%B4",
+	"protocolo": "https",
+	"erros": ["PAGE NOT FOUND: https://unip.br/presencial/comunicacao/agenda.asp__|__https://unip.br/presencial/comunicacao/%C2%B4http://www.institutolego.com.br%C2%B4"]
+},

@@ -1,12 +1,6 @@
 {
 	"dominio": "unip.br",
-	"pagina": "/presencial/",
+	"pagina": "/ead",
 	"protocolo": "https",
-	"erros": ["PAGEERROR: TypeError: Cannot read property 'length' of undefined at preencheinfos (https://unip.br/presencial/central/:798:52) at https://unip.br/presencial/central/:769:3"]
-},
-{
-	"dominio": "unip.br",
-	"pagina": "/presencial/ensino/pos_graduacao/strictosensu/index.aspx",
-	"protocolo": "https",
-	"erros": ["PAGEERROR: SyntaxError: Unexpected token u in JSON at position 0 at JSON.parse (<anonymous>) at <anonymous>:1:371 at https://www.googletagmanager.com/gtm.js?id=GTM-PWP7NP:1332:414 at HTMLScriptElement.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-PWP7NP:1333:118)"]
+	"erros": ["RESPONSE: 451: https://idsync.rlcdn.com/361087.gif?partner_uid=67825f9d-9061-4d00-b19c-2f504bb83efd|","|CONSOLE: Failed to load resource: the server responded with a status of 451 ()|","|REQUEST: net::ERR_TUNNEL_CONNECTION_FAILED https://px.powerlinks.com/user/sync/dsps?userId=67825f9d-9061-4d00-b19c-2f504bb83efd&sourceId=aa4e7548-789b-4df8-a72f-d951a5b206eb|","|CONSOLE: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED|","|RESPONSE: 303: https://i.liadm.com/s/37464?bidder_id=7156&bidder_uuid=67825f9d-9061-4d00-b19c-2f504bb83efd|","|RESPONSE: 303: https://i.liadm.com/s/37464?bidder_id=7156&bidder_uuid=67825f9d-9061-4d00-b19c-2f504bb83efd&_li_chk=true&previous_uuid=32d3cb5b6ca14c4bbab848ae6ee35043"]
 },
