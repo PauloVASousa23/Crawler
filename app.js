@@ -64,8 +64,8 @@ app.post('/startCrawler/', async(req,res) => {
             await delay(2500);
             Crawler.Crawler(req.body.MostrarBrowser,req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks,ObterLinksRepetidos: req.body.ObterLinksRepetidos});
         }
-        
-        res.send('Crawler iniciado!');
+        await delay(1000);
+        res.send(Crawler.Running());
         
     }catch(err){
         console.log(err);
@@ -75,11 +75,10 @@ app.post('/startCrawler/', async(req,res) => {
 
 app.get('/statusCrawler/', (req,res) => {
     try{
-        Crawler.Running();
+        res.send(Crawler.Running());
     }catch(err){
         console.log(err);
     }
-    res.send(Crawler.Running());
 });
 
 app.post('/stopCrawler/', (req,res) => {
@@ -171,6 +170,14 @@ app.post('/getLinksInstancia', (req,res) => {
         res.send("Erro ao pegar Log!");
     }
 })
+
+app.post('/pegarUrlsRestante/', (req,res) => {
+    try{
+        res.send(Crawler.PegarUrlsRestante(req.body.instancia));
+    }catch(err){
+        console.log(err);
+    }
+});
 
 function delay(time) {
     return new Promise(function(resolve) { 

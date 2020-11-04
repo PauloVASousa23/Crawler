@@ -1740,3 +1740,16 @@
 [1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
 [1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 124632
 [1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/140225.722:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-RWOchy\Crashpad\attachments\86f47f39-c3c8-4bd1-b3bd-d0b56788e8ec: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/140225.810:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/140225.810:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 64844
+[1104/140225.811:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/140419.062:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1104/140419.253:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-GDH3dd\Crashpad\attachments\4f9c84b2-8965-49b2-8fdb-12a5d96f1a07: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 175160
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/161026.604:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-s39bEM\Crashpad\attachments\bcb86e60-7d0b-48d1-9792-2a598d238321: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/161026.630:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/161026.631:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 94760
+[1104/161026.631:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility

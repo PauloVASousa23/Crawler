@@ -41,7 +41,7 @@ module.exports = {
         }
     },
     Running: function(){
-        let instanciaFiltrada =[];
+        let instanciaFiltrada = [];
         instancia.map(e=>instanciaFiltrada.push({Timestamp: e["Timestamp"],Id:e["Id"],Rodando:e["Rodando"],Tempo:e["Tempo"], Pagina: e["Pagina"], Funcoes: e["Funcoes"], Pausado: e["Pausar"]}));
         return instanciaFiltrada;
     },
@@ -120,6 +120,17 @@ module.exports = {
         }
 
     },
+    PegarUrlsRestante: function(i){
+        let urls =[];
+
+        instancia.map(e=>{
+            if(e.Id == i){
+                e.UrlsPegas.forEach(i=> !e.Urls.includes(i.split("__|__")[1]) ? urls.push(i.split("__|__")[1]) : "");
+            }
+        });
+
+        return urls;
+    },
 }
 
 async function iniciaInstancia(idInstancia,browser, palavrasChave,palavrasExcecoes,url,repetirUrl, funcoes){
@@ -163,7 +174,7 @@ async function processoCrawler(browser, objInstancia, urlBase){
             setTimeout(()=>{instancia.Tempo = 0},1000);
         });
 
-        let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
+        let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave, objInstancia);
         await b != undefined ? b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "") : "";
         
         for(let i = 0; i<=objInstancia.UrlsPegas.length; i++){
@@ -194,7 +205,7 @@ async function processoCrawler(browser, objInstancia, urlBase){
                             timeout: 300000
                         }).catch(e=> console.log(""));
 
-                        let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
+                        let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave,objInstancia);
 
                         await b != b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "");
                         
@@ -260,11 +271,12 @@ async function processoCrawler(browser, objInstancia, urlBase){
 }
 
 //Pega todos os links da pagina
-async function pegaLink(page, palavrasChave){
+async function pegaLink(page, palavrasChave, objInstancia){
     try{
-        let result = await page.evaluate(async(palavrasChave) => {
+        let result = await page.evaluate(async(palavrasChave, urlsPegas) => {
             try {
                 let links = [];
+                console.log(urlsPegas);
 
                 document.querySelectorAll("a").forEach(e=>{
                     let href = e.href;
@@ -274,7 +286,11 @@ async function pegaLink(page, palavrasChave){
                     palavrasChave.map((e)=>{href.toLowerCase().search(e.toLowerCase()) >= 0 && e != "" ? bool=true:"";});
 
                     if(bool){
-                        if(!links.includes(href)){
+                        let existe = false;
+
+                        urlsPegas.forEach(i=>i.split("__|__")[1] == href ? existe = true : "");
+
+                        if(!existe){
                             links.push(window.location.href + "__|__" + href);
                         }
                     }
@@ -284,7 +300,7 @@ async function pegaLink(page, palavrasChave){
             } catch (e) {
                 console.log("Erro ao pegar: " + e.message);
             }
-        },palavrasChave);
+        },palavrasChave, objInstancia.UrlsPegas);
 
         return result;
     }catch(e){

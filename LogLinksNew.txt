@@ -1,0 +1,32 @@
+{"Instancia":"1604517161315","Url":"https://unip.br/#processoseletivo","ObtidoEm": "https://unip.br/" ,"IdImg":"unip.br1604517180943"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/ead/processoseletivo/inscrevase#/inscricao/new","ObtidoEm": "https://unip.br/" ,"IdImg":"unip.br1604517181700"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/Ead","ObtidoEm": "https://unip.br/" ,"IdImg":"unip.br1604517183154"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517183632"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/servicos/aluno/como_acessar.aspx","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517184039"},
+
+{"Instancia":"1604517161315","Url":"https://sec.unip.br/frame.aspx","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517185474"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/#sair","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517187284"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/atendimento/presencial","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517188340"},
+
+{"Instancia":"1604517161315","Url":"https://www.unip.br/em/","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517188667"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517189194"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/central","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517190667"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/#","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517207804"},
+
+{"Instancia":"1604517161315","Url":"https://sec.unip.br/vestibular/VSTBTransferencia2gradBanner.aspx","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517208345"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/transferenciaimediata","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517208669"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/universidade/arquivo_academico.aspx","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517209464"},
+
+{"Instancia":"1604517161315","Url":"https://unip.br/presencial/universidade/campi.aspx","ObtidoEm": "https://unip.br/presencial/" ,"IdImg":"unip.br1604517210974"},
+

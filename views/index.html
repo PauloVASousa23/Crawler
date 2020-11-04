@@ -429,15 +429,17 @@
                 background-color: #fff;
                 border-radius: 20px;
                 width: 50vw;
-                height: 70vh;
+                height: auto;
                 overflow: hidden;
                 position: relative;
+                padding-bottom: 60px;
             }
 
             #modalLinksBody{
                 overflow: auto;
                 height: calc(70vh - 100px);
                 padding: 30px;
+                padding-top: 0px;
             }
 
             .modalErros{
@@ -728,6 +730,8 @@
         <div class="modalLinks">
             <div class="modalLinksBody">
                 <h3 style="text-align: center;margin-bottom: 10px;">Todos os links acessados</h3>
+                <hr style="width: 50%;margin: auto;"/>
+                <h3 style="text-align: center;margin-bottom: 10px;margin-top: 10px;" id="quantidadeLinks"></h3>
                 <div id="modalLinksBody">
 
                 </div>                
@@ -1141,7 +1145,6 @@
                 let mostrarBrowser = $("#mostrarBrowser:checked").val() == "on";
                 let urlBase = $("#urlBase").val();
                 let palavrasChave = $("#palavrasChaves").val();
-                //let protocolo = $("#protocolo").val();
                 let repetirUrl = $("#repetirUrl:checked").val() == "on";
                 let numCrawlers = $("#numCrawlers").val();
                 let excecoes = $("#palavrasExcecao").val();
@@ -1222,6 +1225,7 @@
                                 let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link' onclick='getLinksInstancia(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
                                 let obterLinksRepetidos = e.Funcoes.ObterLinksRepetidos == "true" ? "<i class='fas fa-redo-alt'></i>" : "";
                                 let configuracao = "<i class='fas fa-cog' onclick='configuracaoInstancia(\"" + e.Id + "\"," + e.Funcoes.ConsoleError + "," + e.Funcoes.Printscreen + "," + e.Funcoes.ObterLinks + "," + e.Funcoes.ObterLinksRepetidos + ")' style='cursor: pointer;'></i>";
+                                let seguintes = "<i class='fas fa-server' onclick='getUrlsRestante(\"" + e.Id + "\")' style='cursor: pointer;'></i>";
 
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
@@ -1245,7 +1249,7 @@
                                             <div class="funcoes">
                                                 `
                                                 +
-                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + configuracao
+                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + configuracao + seguintes
                                                 +
                                                 `
                                             </div>
@@ -1340,16 +1344,17 @@
 
             function deletarCrawler(instancia){
                 $.ajax({ 
-                        type: 'POST', 
-                        url: '/deleteCrawler', 
-                        data: { instancia: instancia}, 
-                        success: function (data) {
-                            $("#status" + instancia).remove();                
-                        },
-                        error: function(data){
-                            console.log("Error: ",data);
-                        }
-                    });
+                    type: 'POST', 
+                    url: '/deleteCrawler', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $("#status" + instancia).fadeOut();
+                        setTimeout(()=>{$("#status" + instancia).remove()},1000);                
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
             }
 
             function pausarCrawler(instancia){
@@ -1412,6 +1417,7 @@
                             let lista = "";
                             data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
                             $("#modalLinksBody").html("<ul>" + lista + "</ul>");            
+                            $("#quantidadeLinks").html("Total de Links: " + data.length);            
                         },
                         error: function(data){
                             console.log("Error: ",data);
@@ -1440,6 +1446,24 @@
                     success: function (data) {
                         verificaCrawler();
                         $("#btnFecharModalConfiguracao").trigger("click");
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+
+            function getUrlsRestante(instancia){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/pegarUrlsRestante', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $(".modalLinks").eq(0).css("display","flex");
+                        let lista = "";
+                        data.forEach(e=>lista+= "<li>" + e + "</li>")
+                        $("#modalLinksBody").html("<ul>" + lista + "</ul>");        
+                        $("#quantidadeLinks").html("Total de Links: " + data.length);           
                     },
                     error: function(data){
                         console.log("Error: ",data);
