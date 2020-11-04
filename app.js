@@ -119,6 +119,59 @@ app.post('/continuarCrawler/', (req,res) => {
     res.send("Pausado com sucesso!");
 });
 
+app.post('/alterarInstancia', (req,res) => {
+    try{
+        Crawler.AlterarInstancia(req.body.instancia,req.body.ConsoleError,req.body.Printscreen,req.body.ObterLinks,req.body.ObterLinksRepetidos,req.body.InstanciaNova);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
+});
+
+app.post('/getConsoleError', (req,res) => {
+    try{
+        fs.access('ObjetosLog.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('ObjetosLog.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 2);
+                    var dt = JSON.parse("[" + data + "]");
+                    let newData = [];
+                    dt.forEach(e=>e.instancia == req.body.InstanciaResponsavel ? newData.push(e) : "");
+                    res.send(newData);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
+app.post('/getLinksInstancia', (req,res) => {
+    try{
+        fs.access('LogLinksNew.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('LogLinksNew.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 3);
+                    var dt = JSON.parse("[" + data + "]");
+                    let newData = [];
+                    dt.forEach(e=>e.Instancia == req.body.InstanciaResponsavel ? newData.push(e) : "");
+                    res.send(newData);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
 function delay(time) {
     return new Promise(function(resolve) { 
         setTimeout(resolve, time)

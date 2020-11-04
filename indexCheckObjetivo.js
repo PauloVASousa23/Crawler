@@ -42,7 +42,7 @@ module.exports = {
     },
     Running: function(){
         let instanciaFiltrada =[];
-        instancia.map(e=>instanciaFiltrada.push({Id:e["Id"],Rodando:e["Rodando"],Tempo:e["Tempo"], Pagina: e["Pagina"], Funcoes: e["Funcoes"], Pausado: e["Pausar"]}));
+        instancia.map(e=>instanciaFiltrada.push({Timestamp: e["Timestamp"],Id:e["Id"],Rodando:e["Rodando"],Tempo:e["Tempo"], Pagina: e["Pagina"], Funcoes: e["Funcoes"], Pausado: e["Pausar"]}));
         return instanciaFiltrada;
     },
     ParaCrawler: function(i){
@@ -95,7 +95,31 @@ module.exports = {
             });
         }
 
-    }
+    },
+    AlterarInstancia: function(i, consoleError, printscreen, obterLinks, obterLinksRepetidos, instanciaNova){
+
+        if(instancia.length > 0){
+            instancia.map((e,j)=>{
+                if(e.Id == i){
+                    instancia[j].Funcoes["ConsoleError"] = consoleError;
+                    instancia[j].Funcoes["Printscreen"] = printscreen;
+                    instancia[j].Funcoes["ObterLinks"] = obterLinks;
+                    instancia[j].Funcoes["ObterLinksRepetidos"] = obterLinksRepetidos;
+                    if(instanciaNova != "Selecione" && instanciaNova != i){
+                        instancia.map((h,i)=>{
+                            if(h.Id == Number(instanciaNova)){
+                                instancia[j].UrlsPegas = instancia[i].UrlsPegas;
+                                instancia[j].PalavrasChave = instancia[i].PalavrasChave;
+                                instancia[j].PalavrasExcecoes = instancia[i].PalavrasExcecoes;
+                                instancia[j].Urls = instancia[i].Urls;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+    },
 }
 
 async function iniciaInstancia(idInstancia,browser, palavrasChave,palavrasExcecoes,url,repetirUrl, funcoes){
@@ -104,12 +128,11 @@ async function iniciaInstancia(idInstancia,browser, palavrasChave,palavrasExceco
 
     let objeto = null;
     if(repetirUrl == "true"){
-        objeto = {Id: idInstancia,Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChaveComp, PalavrasExcecoes: palavrasExcecoes, Pagina: urlDomain, Urls: urlsAcessadas, UrlsPegas: urlsPegas , UrlAtual: "", UrlsNoLog: urlsLog ,Funcoes: funcoes, Pausar: false};
+        objeto = {Id: idInstancia,Timestamp: Date.now(),Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChaveComp, PalavrasExcecoes: palavrasExcecoes, Pagina: urlDomain, Urls: urlsAcessadas, UrlsPegas: urlsPegas , UrlAtual: "", UrlsNoLog: urlsLog ,Funcoes: funcoes, Pausar: false};
     }else{
-        objeto = {Id: idInstancia,Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChave, PalavrasExcecoes: palavrasExcecoes, Pagina: urlDomain, Urls: [], UrlsPegas: [] , UrlAtual: "", UrlsNoLog: [],Funcoes: funcoes, Pausar: false};
+        objeto = {Id: idInstancia,Timestamp: Date.now(),Browser: browser, Page: null, Rodando: true, Tempo: 0, IntervalTempo: null, Parou: true, PalavrasChave: palavrasChave, PalavrasExcecoes: palavrasExcecoes, Pagina: urlDomain, Urls: [], UrlsPegas: [] , UrlAtual: "", UrlsNoLog: [],Funcoes: funcoes, Pausar: false};
     }
 
-    console.log("Objeto: ",objeto.UrlsPegas);
     instancia.push(objeto);
     return objeto;
 }
@@ -174,13 +197,12 @@ async function processoCrawler(browser, objInstancia, urlBase){
                         let b = await pegaLink(objInstancia.Page,objInstancia.PalavrasChave);
 
                         await b != b.forEach((e,i,arr) => !objInstancia.UrlsPegas.includes(b[i]) ? objInstancia.UrlsPegas.push(b[i]) : "");
-
+                        
                         console.log("ID: " + objInstancia.Id + " - URL: " + objInstancia.UrlsPegas[i].split("__|__")[1]);
 
-                        let id = "";
+                        let id = objInstancia.Pagina + Date.now();
                         
                         if(objInstancia.Funcoes["Printscreen"] == "true"){
-                            id = objInstancia.Pagina + Date.now()
                             await delay(1000);
                             await objInstancia.Page.screenshot({
                                 path: "screenshots/" + id + ".jpg",
@@ -189,33 +211,36 @@ async function processoCrawler(browser, objInstancia, urlBase){
                             });
                         }
 
+                        if(objInstancia.Funcoes["ObterLinksRepetidos"] == "true"){
+                            if(objInstancia.Funcoes["ObterLinks"] == "true"){
+                                let instanciaResponsavel = objInstancia.Timestamp;
+                                escreveNoLog("{\"Instancia\":\"" + instanciaResponsavel + "\",\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + (objInstancia.Funcoes["Printscreen"] == "true" ? id : "") + "\"},\n", "LogLinksNew");
+                            }
+                        }else if(objInstancia.Funcoes["ObterLinks"] == "true"){
+                            if(!objInstancia.UrlsNoLog.includes(objInstancia.UrlsPegas[i].split("__|__")[1])){
+                                objInstancia.UrlsNoLog.push(objInstancia.UrlsPegas[i].split("__|__")[1]);
+                                let instanciaResponsavel = objInstancia.Timestamp;
+                                escreveNoLog("{\"Instancia\":\"" + instanciaResponsavel + "\",\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
+                            }
+                        }
+                        
                         if(objInstancia.Funcoes["ConsoleError"] == "true"){
                             await pegaPagina(objInstancia);
 
                             if(objInstancia.Page.url().search("404.aspx") >= 0 ){
                                 let url = objInstancia.UrlsPegas[i];
-            
+                                
                                 let removeHttp = url.substring( url.indexOf("://")+3);
                                 let urlDomain = removeHttp.substring(0, removeHttp.indexOf("/"));
                                 let urlContent = removeHttp.substring(removeHttp.indexOf("/"));
                                 let protocolo = url.substring(0, url.indexOf("://"));
-
-                                let objError = {dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: ["PAGE NOT FOUND: " + url]};
+                                let instanciaResponsavel = objInstancia.Timestamp;
+                                
+                                let objError = {instancia: instanciaResponsavel,dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: ["PAGE NOT FOUND: " + url]};
                                 
                                 escreveNoLog(objError,"ObjetosLogNew");
                             }
                                     
-                        }
-
-                        if(objInstancia.Funcoes["ObterLinksRepetidos"] == "true"){
-                            if(objInstancia.Funcoes["ObterLinks"] == "true"){
-                                escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
-                            }
-                        }else if(objInstancia.Funcoes["ObterLinks"] == "true"){
-                            if(!objInstancia.UrlsNoLog.includes(objInstancia.UrlsPegas[i].split("__|__")[1])){
-                                objInstancia.UrlsNoLog.push(objInstancia.UrlsPegas[i].split("__|__")[1]);
-                                escreveNoLog("{\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
-                            }
                         }
                         
                     }catch(e){
@@ -224,6 +249,7 @@ async function processoCrawler(browser, objInstancia, urlBase){
                 }
 
             }
+
         }
         await delay(5000);
         objInstancia["Page"].close();
@@ -342,8 +368,9 @@ function verificaErroELoga(arr, objInstancia){
         let urlDomain = removeHttp.substring(0, removeHttp.indexOf("/"));
         let urlContent = removeHttp.substring(removeHttp.indexOf("/"));
         let protocolo = url.substring(0, url.indexOf("://"));
+        let instanciaResponsavel = objInstancia.Timestamp;
 
-        let objError = {dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: arrPush};
+        let objError = {instancia: instanciaResponsavel,dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: arrPush};
 
         escreveNoLog(objError,"ObjetosLog");
     }

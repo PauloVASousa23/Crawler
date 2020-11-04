@@ -92,6 +92,7 @@
                 margin: 20px 5px;
                 filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.5));
                 transition: .5s;
+                z-index: -1;
             }
 
             .header{
@@ -359,6 +360,10 @@
                 margin-right: 10px;
             }
 
+            .funcoes > i:hover {
+                color: #3552ad;
+            }
+
             .idInstancia {
                 position: absolute;
                 right: 10px;
@@ -435,6 +440,120 @@
                 padding: 30px;
             }
 
+            .modalErros{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalErrosBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: 70vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #modalErrosBody{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                height: calc(70vh - 100px);
+                padding: 30px;
+            }
+
+            .modalConfiguracao{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalConfiguracaoBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: auto;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            #modalConfiguracaoBody{
+                overflow: auto;
+                padding: 30px;
+            }
+
+            #modalConfiguracaoBody > fieldset{
+                width: 100%;
+                height: max-content;
+            }
+
+            #modalErrosBody > .item{
+                min-height: 200px;
+                width: 31%;
+                background-color: #fff;
+                border-radius: 15px;
+                overflow: hidden;
+                margin: 20px 5px;
+                filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.5));
+                transition: .5s;
+            }
+
+            .buttonsModal{
+                padding: 5px 25px;
+                text-align: end;
+                margin-bottom: 10px;
+            }
+
+            .buttonsModal > .btnFecharModal {
+                position: relative;
+                background-color: #616161;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #000;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none !important;
+                right: initial;
+                bottom: initial;
+            }
+
+            .buttonsModal > .btnEnviarConfiguracao {
+                position: relative;
+                background-color: #5db379;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #427e56;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none !important;
+                right: initial;
+                bottom: initial;
+            }
+
+            .btnEnviarConfiguracao:hover{
+                background-color: #529f6b;
+            }
+
+            .btnEnviarConfiguracao:hover:active{
+                background-color: #458a5c;
+                border:none;
+            }
+
             .btnFecharModal {
                 position: absolute;
                 right: 20px;
@@ -485,6 +604,7 @@
                 font-size: 16px;
                 outline: none !important;
                 cursor: pointer;
+                z-index: 999;
             }
 
             .btnControleCrawler:hover{
@@ -607,11 +727,55 @@
 
         <div class="modalLinks">
             <div class="modalLinksBody">
-                <h3 style="text-align: center;margin-bottom: 10px;">Links acessados</h3>
+                <h3 style="text-align: center;margin-bottom: 10px;">Todos os links acessados</h3>
                 <div id="modalLinksBody">
 
                 </div>                
                 <button class="btnFecharModal" id="btnFecharModal">Fechar</button>
+            </div>
+        </div>
+
+        <div class="modalErros">
+            <div class="modalErrosBody">
+                <h3 style="text-align: center;margin-bottom: 10px;">Erros encontrados</h3>
+                <div id="modalErrosBody">
+
+                </div>                
+                <button class="btnFecharModal" id="btnFecharModalErros">Fechar</button>
+            </div>
+        </div>
+
+        <div class="modalConfiguracao">
+            <div class="modalConfiguracaoBody">
+                <h3 style="text-align: center;margin-bottom: 10px;">Configuração</h3>
+                <div id="modalConfiguracaoBody">
+                    <fieldset>
+                        <legend>Funções</legend>
+                        <label>
+                            <input type="checkbox" id="ConsoleErrosConfiguracao" style="height: 18px;width: 18px;"> Console errors
+                        </label>
+                        <br/>
+                        <label>
+                            <input type="checkbox" id="PrintscreenConfiguracao" style="height: 18px;width: 18px;"> Printscreen
+                        </label>
+                        <br/>
+                        <label>
+                            <input type="checkbox" id="ObterLinksConfiguracao" style="height: 18px;width: 18px;"> Obter links
+                        </label> <i class="fas fa-eye" onclick="abreLog()"></i>
+                        <br/>
+                        <label>
+                            <input type="checkbox" id="ObterLinksRepetidosConfiguracao" style="height: 18px;width: 18px;"> Obter links repetidos
+                        </label>
+                    </fieldset>
+                    Usar urls obtidas da instancia: &nbsp;&nbsp;
+                    <select id="urlsInstancia" style="margin-top: -5px;">
+                        <option default>Selecione</option>
+                    </select>
+                </div>             
+                <div class="buttonsModal">
+                    <button class="btnEnviarConfiguracao" id="btnEnviarConfiguracao">Enviar</button>
+                    <button class="btnFecharModal" id="btnFecharModalConfiguracao">Fechar</button>
+                </div>
             </div>
         </div>
 
@@ -642,17 +806,25 @@
                 filtrarPorStatus();
             });
 
+            $("#btnFecharModalErros").on("click", function(){
+                $(".modalErros").eq(0).fadeOut();
+            });
+
             $("#btnFecharModal").on("click", function(){
                 $(".modalLinks").eq(0).fadeOut();
+            });
+
+            $("#btnFecharModalConfiguracao").on("click", function(){
+                $(".modalConfiguracao").eq(0).fadeOut();
             });
 
             $(".btnControleCrawler").eq(0).on("click",function(){
                 let $aside = $("aside");
                 let $conteudo = $(".conteudo").eq(0);
                 if($aside.css("left") == "0px"){
-                    $aside.css("left","-410px");
+                    $aside.css("left","-30vw");
                     $conteudo.css("width","100vw");
-                    $conteudo.css("margin-left","-410px");
+                    $conteudo.css("margin-left","-30vw");
                 }else{
                     $aside.css("left","0px");
                     $conteudo.css("width","70vw");
@@ -667,6 +839,19 @@
                 }else{
                     $conteudo.css("top","50px");
                 }
+            });
+
+            let IdEnviar;
+            let quantidadeInstancia;
+            let instancias;
+
+            $("#btnEnviarConfiguracao").on("click",function(){
+                let consoleError = $("#ConsoleErrosConfiguracao").prop("checked");
+                let printscreen = $("#PrintscreenConfiguracao").prop("checked");
+                let obterLinks = $("#ObterLinksConfiguracao").prop("checked");
+                let obterLinksRepetidos = $("#ObterLinksRepetidosConfiguracao").prop("checked");
+                let instancia = $("#urlsInstancia").val();
+                enviarConfiguracao(IdEnviar, consoleError, printscreen, obterLinks, obterLinksRepetidos, instancia);
             });
 
             function abreLog(){
@@ -892,6 +1077,56 @@
                 });                
             };
 
+            function montaModalErro(data){
+                let count = 0;
+                data.forEach((e,i)=>{
+                    
+                    let li = "";
+                    if(data[i].erros != undefined && data[i].erros != ""){
+                        count++;
+                        for(let j =0; j<data[i].erros.length ; j++){
+                            let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"' onclick='collapse(\"Err"+i+""+j+"\")'/></button>" : "";
+                                                        
+                            if(data[i].erros[j].includes("PAGEERROR:")){
+                                let cor = "#bf6f6f";
+                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap pageError' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|PAGEERROR", "PAGEERROR") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("REQUEST:")){
+                                let cor = "#6cb4ba";
+                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap request' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|REQUEST", "REQUEST") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("CONSOLE")){
+                                let cor = "#d3d683";
+                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap console' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|CONSOLE", "CONSOLE") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("RESPONSE")){
+                                let cor = "#d6b783";
+                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap response' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|RESPONSE", "RESPONSE") +"</label>"+button+"</li>";
+                            }else{
+                                let cor = "#83d69a";
+                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap generic' style='background-color:"+cor+"'><label>" + data[i].erros[j] +"</label>"+button+"</li>";
+                            }
+                        }
+                            
+                        $("#modalErrosBody").append(`
+                            <div class="item">
+                                <div class="header">
+                                    ` + e.dominio + `
+                                </div>
+                                <div class="content">
+                                    <p class="textWrap"><strong>Pagina:</strong> <label>` + e.pagina + `</label></p>
+                                    <p class="textWrap"><strong>Url:</strong> <label><a href="` + e.protocolo+"://"+e.dominio+e.pagina + `">` + e.protocolo+"://"+e.dominio+e.pagina + `</a></label></p>
+                                    <ul>
+                                        ` + li + `
+                                    </ul>
+                                </div>
+                            </div>
+                        `);
+                         
+                    }
+                });                
+            };
+
             function collapse(id){
                 if($("#lbl"+id+"").hasClass("collapsed")){
                     $("#lbl"+id+"").removeClass("collapsed");
@@ -930,10 +1165,17 @@
 
                             verificaCrawler(true);
                             
-                            
+                            setTimeout(()=>{
+                                let $conteudo = $(".cardsStatus").eq(0);
+                                if($conteudo.css("top") != "50px"){
+                                    $conteudo.css("top","50px");
+                                }
+                            },2000);
+
                             setTimeout(()=>{
                                 getLog();
                             },10000);
+                            
                             
                         },
                         error: function(data){
@@ -971,12 +1213,15 @@
                 setTimeout(()=>{
                     $.get("/statusCrawler", function(data){
                         if(data.length > 0){
+                            quantidadeInstancia = data.length;
+                            instancias = data;
                             $("#cardsStatus").html("");
                             data.map(e=>{
-                                let consoleError = e.Funcoes.ConsoleError == "true" ? "<i class='fas fa-bug'></i>" : "";
+                                let consoleError = e.Funcoes.ConsoleError == "true" ? "<i class='fas fa-bug' onclick='getConsoleError(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
                                 let printscreen = e.Funcoes.Printscreen == "true" ? "<i class='fas fa-print'></i>" : "";
-                                let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link'></i>" : "";
+                                let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link' onclick='getLinksInstancia(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
                                 let obterLinksRepetidos = e.Funcoes.ObterLinksRepetidos == "true" ? "<i class='fas fa-redo-alt'></i>" : "";
+                                let configuracao = "<i class='fas fa-cog' onclick='configuracaoInstancia(\"" + e.Id + "\"," + e.Funcoes.ConsoleError + "," + e.Funcoes.Printscreen + "," + e.Funcoes.ObterLinks + "," + e.Funcoes.ObterLinksRepetidos + ")' style='cursor: pointer;'></i>";
 
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
@@ -1000,7 +1245,7 @@
                                             <div class="funcoes">
                                                 `
                                                 +
-                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos
+                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + configuracao
                                                 +
                                                 `
                                             </div>
@@ -1017,11 +1262,6 @@
                                 </div>
                                 `);
                             });
-
-                            let $conteudo = $(".cardsStatus").eq(0);
-                            if($conteudo.css("top") == "50px"){
-                                $conteudo.css("top","calc(100vh - 42px)");
-                            }
 
                             myStatusPrimeiraInstancia = setInterval(() => {
                                 $.get("/statusCrawler", function(data){
@@ -1078,7 +1318,6 @@
 
             function getLinks(){
                 $.get("/getLinks", function(data){
-                    console.log(data);
                     let lista = "";
                     data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
                     $("#modalLinksBody").html("<ul>" + lista + "</ul>");
@@ -1147,6 +1386,67 @@
                     });
             }
         
+            function getConsoleError(instancia){
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/getConsoleError', 
+                        data: { InstanciaResponsavel: instancia}, 
+                        success: function (data) {
+                            console.log(data);    
+                            $(".modalErros").eq(0).css("display","flex");
+                            montaModalErro(data);
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+            
+            function getLinksInstancia(instancia){
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/getLinksInstancia', 
+                        data: { InstanciaResponsavel: instancia}, 
+                        success: function (data) {
+                            $(".modalLinks").eq(0).css("display","flex");
+                            let lista = "";
+                            data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
+                            $("#modalLinksBody").html("<ul>" + lista + "</ul>");            
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+
+            function configuracaoInstancia(Id,ConsoleError,Printscreen,ObterLinks,ObterLinksRepetidos){
+                $(".modalConfiguracao").eq(0).css("display","flex");
+                $("#ConsoleErrosConfiguracao").prop("checked",ConsoleError);
+                $("#PrintscreenConfiguracao").prop("checked",Printscreen);
+                $("#ObterLinksConfiguracao").prop("checked",ObterLinks);
+                $("#ObterLinksRepetidosConfiguracao").prop("checked",ObterLinksRepetidos);
+                $("#urlsInstancia").html("");
+                $("#urlsInstancia").append("<option>Selecione</option>")
+                instancias.forEach(e=> $("#urlsInstancia").append("<option>"+e.Id+"</option>"));
+                
+                IdEnviar = Id;
+            }
+
+            function enviarConfiguracao(Id,ConsoleError,Printscreen,ObterLinks,ObterLinksRepetidos, instanciaNova){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/alterarInstancia', 
+                    data: { instancia: Id, ConsoleError:ConsoleError,Printscreen:Printscreen,ObterLinks:ObterLinks,ObterLinksRepetidos:ObterLinksRepetidos, InstanciaNova: instanciaNova}, 
+                    success: function (data) {
+                        verificaCrawler();
+                        $("#btnFecharModalConfiguracao").trigger("click");
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+
         </script>
     </body>
 </html>
