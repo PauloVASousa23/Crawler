@@ -38,14 +38,34 @@ app.get('/getLog', (req,res) => {
     }
 })
 
+app.get('/getLinks', (req,res) => {
+    try{
+        fs.access('LogLinksNew.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('LogLinksNew.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 3);
+                    var dt = JSON.parse("[" + data + "]");
+                    res.send(dt);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
 app.post('/startCrawler/', async(req,res) => {
     try{
         for(let i=0;i<req.body.simultaneos; i++){
-            await delay(2000);
-            Crawler.Crawler(req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl);
+            await delay(2500);
+            Crawler.Crawler(req.body.MostrarBrowser,req.body.baseUrl,req.body.palavrasChave,req.body.repetirUrl,req.body.excecoes,{ConsoleError: req.body.ConsoleError, Printscreen: req.body.Printscreen, ObterLinks: req.body.ObterLinks, BuscarNaPagina: req.body.BuscarNaPagina}, req.body.PalavraBusca);
         }
-        
-        res.send('Crawler iniciado!');
+        await delay(1000);
+        res.send(Crawler.Running());
         
     }catch(err){
         console.log(err);
@@ -55,11 +75,10 @@ app.post('/startCrawler/', async(req,res) => {
 
 app.get('/statusCrawler/', (req,res) => {
     try{
-        Crawler.Running();
+        res.send(Crawler.Running());
     }catch(err){
         console.log(err);
     }
-    res.send(Crawler.Running());
 });
 
 app.post('/stopCrawler/', (req,res) => {
@@ -79,6 +98,93 @@ app.post('/deleteCrawler/', (req,res) => {
         console.log(err);
     }
     res.send("Deletado com sucesso!");
+});
+
+app.post('/pausarCrawler/', (req,res) => {
+    try{
+        Crawler.PausarCrawler(req.body.instancia);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
+});
+
+app.post('/continuarCrawler/', (req,res) => {
+    try{
+        Crawler.ContinuarCrawler(req.body.instancia);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
+});
+
+app.post('/alterarInstancia', (req,res) => {
+    try{
+        Crawler.AlterarInstancia(req.body.instancia,req.body.ConsoleError,req.body.Printscreen,req.body.ObterLinks,req.body.ObterLinksRepetidos,req.body.InstanciaNova);
+    }catch(err){
+        console.log(err);
+    }
+    res.send("Pausado com sucesso!");
+});
+
+app.post('/getConsoleError', (req,res) => {
+    try{
+        fs.access('ObjetosLog.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('ObjetosLog.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 2);
+                    var dt = JSON.parse("[" + data + "]");
+                    let newData = [];
+                    dt.forEach(e=>e.instancia == req.body.InstanciaResponsavel ? newData.push(e) : "");
+                    res.send(newData);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
+app.post('/getLinksInstancia', (req,res) => {
+    try{
+        fs.access('LogLinksNew.txt', fs.F_OK, (err) =>{
+            if(err){
+                console.log("Não existe o arquivo");
+                return;
+            }
+
+            fs.readFile('LogLinksNew.txt', 'utf8', function(err, data) {
+                if (err) throw err;
+                    data = data.substring(0, data.length - 3);
+                    var dt = JSON.parse("[" + data + "]");
+                    let newData = [];
+                    dt.forEach(e=>e.Instancia == req.body.InstanciaResponsavel ? newData.push(e) : "");
+                    res.send(newData);
+            });
+        });
+    }catch(e){
+        res.send("Erro ao pegar Log!");
+    }
+})
+
+app.post('/pegarUrlsAcessadas/', (req,res) => {
+    try{
+        res.send(Crawler.PegarUrlsAcessadas(req.body.instancia));
+    }catch(err){
+        console.log(err);
+    }
+});
+
+app.post('/pegarUrlsRestante/', (req,res) => {
+    try{
+        res.send(Crawler.PegarUrlsRestante(req.body.instancia));
+    }catch(err){
+        console.log(err);
+    }
 });
 
 function delay(time) {

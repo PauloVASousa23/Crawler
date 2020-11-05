@@ -10,8 +10,31 @@
                 box-sizing: border-box;
                 font-family: cursive;
             }
+
             body{
-                background-color: #455892;
+                background: linear-gradient(340deg, #202c51, #1c3da2);
+                display: flex;
+                overflow: hidden;
+                flex-wrap: wrap;
+            }
+
+            aside{
+                width: 30vw;
+                background-color: #fffffff0;
+                border-radius: 0px 50px 50px 0px;
+                padding: 20px;
+                position: relative;
+                left: 0px;
+                transition: 1s;
+                filter: drop-shadow(2px 4px 6px black);
+            }
+
+            .conteudo{
+                overflow: auto;
+                height: 100vh;
+                width: 70vw;
+                transition: 1s;
+                padding-left: 15px;
             }
 
             .divHr{
@@ -56,7 +79,7 @@
             }
 
             .container{
-                padding:30px;
+                padding:0px 30px 30px 30px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -71,6 +94,7 @@
                 margin: 20px 5px;
                 filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.5));
                 transition: .5s;
+                z-index: 0;
             }
 
             .header{
@@ -79,9 +103,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #fff;
                 font-size: 24px;
                 box-shadow: inset 10px 10px 10px 10px #25366a;
+                color: #fff;
             }
 
             .content{
@@ -121,6 +145,12 @@
                 color: transparent;
             }
 
+            #filtroLinks{
+                width: calc(100% - 200px);
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+
             label{
                 word-break: break-all;
             }
@@ -157,7 +187,7 @@
             .btnCrawler{
                 margin: 0px 15px;
                 display: block;
-                background-color: #6ebd88;
+                background-color: #5db379;
                 padding: 10px 20px;
                 border: none;
                 border-radius: 10px;
@@ -170,8 +200,12 @@
             }
 
             .btnCrawler:not([disabled]):hover{
+                background-color:#569e6e;
+            }
+
+            .btnCrawler:not([disabled]):hover:active{
                 margin-top: 4px;
-                border-bottom: 0px solid #4c8e62;
+                border-bottom: 0px solid #569e6e;
             }
 
             .btnCrawler:disabled {
@@ -197,7 +231,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                color: #fff;
                 position: relative;
             }
             .inputUrl > label > div{
@@ -207,11 +240,12 @@
             input {
                 color: #000;
                 padding: 5px 20px;
-                width: 300px;
+                width: 22vw;
                 height: 40px;
                 border-radius: 100px;
                 border: none;
                 outline: none;
+                box-shadow: 2px 1px 6px -3px rgba(0,0,0,0.7);
             }
 
             .hintUrl{
@@ -260,6 +294,19 @@
                 background-color: #afaa52;
             }
 
+            .btnInstancias {
+                padding: 10px;
+                border: none;
+                border-radius: 15px 15px 0px 0px;
+                font-size: 16px;
+                outline: none !important;
+                cursor: pointer;
+            }
+
+            .btnInstancias:hover{
+                background-color: #d2d3d7;
+            }
+
             .cardStatusCrawler{
                 position: relative;
                 background-color: #83d69a;
@@ -268,15 +315,27 @@
                 border: 2px solid #fff;
                 box-shadow: 0px 0px 10px 2px #000;
                 margin-top: 25px;
-                margin-right: 25px;
+                margin-right: 15px;
+                margin-left: 15px;
             }
 
-            .cardsStatus{
+            .cardsStatus {
                 display: flex;
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: calc(100vh - 42px);
+                right: 20px;
                 flex-direction: column;
+                background-color: #ffffff80;
+                border-radius: 15px 15px 0px 0px;
+                height: 100vh;
+                transition: 1s;
+                min-width: 291px;
+            }
+
+            #cardsStatus{
+                overflow: auto;
+                height: calc(100vh - 93px);
+                padding-bottom: 30px;
             }
 
             .acao{
@@ -301,6 +360,24 @@
                 margin-right: 20px;
             }
 
+            .funcoes{
+                padding-top: 10px;
+            }
+            
+            .funcoes > i {
+                margin-right: 10px;
+            }
+
+            .funcoes > i:hover {
+                color: #3552ad;
+            }
+
+            .idInstancia {
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
+
             .disabled{
                 display: none;
             }
@@ -314,9 +391,9 @@
             .filtros > div{
                 display: flex;
                 flex-direction: column;
-                color: #fff;
                 margin: 0px 10px;
                 align-items: flex-start;
+                color: #fff;
             }
 
             select{
@@ -329,93 +406,392 @@
                 margin-right: 25px;
             }
 
-            #palavrasChaves{
-                width: 400px;
-            }
-
             #numCrawlers::-webkit-outer-spin-button,
             #numCrawlers::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
             }
+
+            fieldset{
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            legend{
+                width: 35%;
+                text-align: center;
+            }
+
+            .modalLinks{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalLinksBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: auto;
+                overflow: hidden;
+                position: relative;
+                padding-bottom: 60px;
+            }
+
+            #modalLinksBody{
+                overflow: auto;
+                height: calc(70vh - 100px);
+                padding: 30px;
+                padding-top: 0px;
+            }
+
+            .modalErros{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalErrosBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: 70vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #modalErrosBody{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                height: calc(70vh - 100px);
+                padding: 30px;
+            }
+
+            #modalErrosBody > .item{
+                z-index: 999;
+            }
+
+            .modalConfiguracao{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalConfiguracaoBody{
+                background-color: #fff;
+                border-radius: 20px;
+                width: 50vw;
+                height: auto;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            #modalConfiguracaoBody{
+                overflow: auto;
+                padding: 30px;
+            }
+
+            #modalConfiguracaoBody > fieldset{
+                width: 100%;
+                height: max-content;
+            }
+
+            #modalErrosBody > .item{
+                min-height: 200px;
+                width: 31%;
+                background-color: #fff;
+                border-radius: 15px;
+                overflow: hidden;
+                margin: 20px 5px;
+                filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.5));
+                transition: .5s;
+            }
+
+            .buttonsModal{
+                padding: 5px 25px;
+                text-align: end;
+                margin-bottom: 10px;
+            }
+
+            .buttonsModal > .btnFecharModal {
+                position: relative;
+                background-color: #616161;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #000;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none !important;
+                right: initial;
+                bottom: initial;
+            }
+
+            .buttonsModal > .btnEnviarConfiguracao {
+                position: relative;
+                background-color: #5db379;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #427e56;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none !important;
+                right: initial;
+                bottom: initial;
+            }
+
+            .btnEnviarConfiguracao:hover{
+                background-color: #529f6b;
+            }
+
+            .btnEnviarConfiguracao:hover:active{
+                background-color: #458a5c;
+                border:none;
+            }
+
+            .btnFecharModal {
+                position: absolute;
+                right: 20px;
+                bottom: 15px;
+                background-color: #616161;
+                padding: 5px 25px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 5px solid #000;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none !important;
+            }
+
+            .btnFecharModal:hover {
+                background-color: #484848;
+            }
+
+            .btnFecharModal:hover:active {
+                background-color: #484848;
+                border: none;
+            }
+
+            .fa-eye{
+                color: #4c8e62;
+                cursor: pointer;
+            }
+
+            .fa-eye:hover{
+                color: #3f6a03;
+            }
+
+            #modalLinksBody > ul > li {
+                word-break: break-all;
+            }
+
+            .btnControleCrawler{
+                position: absolute;
+                right: -114px;
+                top: 115px;
+                padding: 10px 20px;
+                transform: rotate(90deg);
+                border: none;
+                background-color: #f0f0f1;
+                border-radius: 15px 15px 0px 0px;
+                font-size: 16px;
+                outline: none !important;
+                cursor: pointer;
+                z-index: 999;
+            }
+
+            .btnControleCrawler:hover{
+                background-color: #d2d3d7;
+            }
+
+            .asideHidden{
+                left: -500px;
+            }
         </style>
+        <script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h2>Crawler</h2>
-        <div class="divHr">
-            <hr class="hr20"/>
-        </div>
-        <br/>
-        <div class="inputUrl">
+        <aside>
+            <button class="btnControleCrawler">Controle do Crawler</button>
             
-            <div class="protocolo">
-                <select id="protocolo">
-                    <option>https</option>
-                    <option>http</option>
-                </select>
-            </div>
-            <label>
-                <div>
-                    URL base:
+            <div class="inputUrl">
+                
+                <label>
                     <div>
-                        <div class="hintUrl">hint</div>
-                        <input type="text" id="urlBase"></input>
+                        URL base:
+                        <div>
+                            <div class="hintUrl">hint</div>
+                            <input type="text" id="urlBase"></input>
+                        </div>
                     </div>
+                </label>
+                
+            </div>
+            <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                Palavras chaves (Separe por ';'):
+                <div>
+                    <div class="hintUrl">hint</div>
+                    <input type="text" id="palavrasChaves"></input>
                 </div>
             </label>
+
+            <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                Exceções (Separe por ';'):
+                <div>
+                    <input type="text" id="palavrasExcecao"></input>
+                </div>
+            </label>
+            <div style="display: flex;justify-content: center;align-items: center;padding: 10px;">
+                <label>
+                    Iniciar <input type="number" maxlength="15" max="15" id="numCrawlers" style="width: 60px;text-align: center;" value="1"> Crawler simultaneo
+                </label>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;padding: 10px;">
+                <label>
+                    <input type="checkbox" id="repetirUrl" style="height: 18px;width: 18px;"> Não repetir urls do Crawler anterior
+                </label>
+            </div>
+
+            <fieldset>
+                <legend>Funções</legend>
+                <label>
+                    <input type="checkbox" id="ConsoleErros" style="height: 18px;width: 18px;"> Console errors
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="Printscreen" style="height: 18px;width: 18px;"> Printscreen
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="ObterLinks" style="height: 18px;width: 18px;"> Obter links
+                </label> <i class="fas fa-eye" onclick="abreLog()"></i>
+                <br/>
+                <label>
+                    <input type="checkbox" id="BuscarNaPagina" style="height: 18px;width: 18px;"> Buscar na pagina
+                </label> <input type="text" placeholder="Separe por ;" id="palavraChaveBusca" style="height: 0px;width: 100%; transition: .5s;padding: 0px;">
+                <br/>
+            </fieldset>
+
+            <div style="display: flex;justify-content: center;align-items: center;">
+                <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
+            </div>
+            <div style="text-align: center;margin-top: 10px;">
+                <label>
+                    <input type="checkbox" id="mostrarBrowser" style="height: 18px;width: 18px;"> Mostrar browser
+                </label>
+            </div>
+            <br/>
             
-        </div>
-        <label style="margin: 10px 0px;display: flex;flex-direction: column;justify-content: center;align-items: center;color: #fff;">
-            Palavras chaves nas URL para acessar (Separe por ponto e virgula):
-            <div>
-                <div class="hintUrl">hint</div>
-                <input type="text" id="palavrasChaves"></input>
+        </aside>
+        
+        <div class="conteudo">
+            <h2 id="qtd">
+            </h2>
+            <div class="filtros">
+                <div>
+                    Status:
+                    <select id="status">
+                        <option default>Selecione</option>
+                        <option>Todos</option>
+                        <option>Console</option>
+                        <option>Request</option>
+                        <option>Response</option>
+                        <option>Page error</option>
+                    </select>
+                </div>
+                <div>
+                    Dominio:
+                    <select id="dominios">
+                        <option default>Selecione</option>
+                        <option>Todos</option>
+                    </select>
+                </div>
+                <button class="btnFiltrar" id="btnFiltrar"><i class="fas fa-search"></i> Filtrar</button>
             </div>
-        </label>
-        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
-            <label>
-                Iniciar <input type="number" maxlength="15" max="15" id="numCrawlers" style="width: 60px;text-align: center;" value="1"> Crawler simultaneo
-            </label>
-        </div>
-        <div style="display: flex;justify-content: center;align-items: center;padding: 10px;color: #fff;">
-            <label>
-                <input type="checkbox" id="repetirUrl" style="height: 18px;width: 18px;"> Não repetir urls do Crawler anterior
-            </label>
-        </div>
-        <div style="display: flex;justify-content: center;align-items: center;">
-            <button onclick="startCrawler(1)" class="btnCrawler">Iniciar Crawler</button>
-        </div>
-        <br/>
-        <h2 id="qtd">
-
-        </h2>
-        <div class="filtros">
-            <div>
-                Status:
-                <select id="status">
-                    <option default>Selecione</option>
-                    <option>Todos</option>
-                    <option>Console</option>
-                    <option>Request</option>
-                    <option>Response</option>
-                    <option>Page error</option>
-                </select>
+            <div class="container" id="itemList">
             </div>
-            <div>
-                Dominio:
-                <select id="dominios">
-                    <option default>Selecione</option>
-                    <option>Todos</option>
-                </select>
+        </div>
+        
+        <div class="cardsStatus">
+            <button class="btnInstancias">Instancias</button>
+            <div id="cardsStatus">
+
+            </div>      
+        </div>
+
+        <div class="modalLinks">
+            <div class="modalLinksBody">
+                <h3 style="text-align: center;margin-bottom: 10px;" id="tituloModalLinks">Todos os links acessados</h3>
+                <hr style="width: 50%;margin: auto;"/>
+                <input type="text" id="filtroLinks" placeholder="Filtrar links">
+                <h3 style="text-align: center;margin-bottom: 10px;margin-top: 10px;" id="quantidadeLinks"></h3>
+                <div id="modalLinksBody">
+
+                </div>                
+                <button class="btnFecharModal" id="btnFecharModal">Fechar</button>
             </div>
-            <button class="btnFiltrar" id="btnFiltrar"><i class="fas fa-search"></i> Filtrar</button>
         </div>
 
-        <div class="container" id="itemList">
+        <div class="modalErros">
+            <div class="modalErrosBody">
+                <h3 style="text-align: center;margin-bottom: 10px;">Erros encontrados</h3>
+                <div id="modalErrosBody">
 
+                </div>                
+                <button class="btnFecharModal" id="btnFecharModalErros">Fechar</button>
+            </div>
         </div>
 
-        <div class="cardsStatus" id="cardsStatus">
+        <div class="modalConfiguracao">
+            <div class="modalConfiguracaoBody">
+                <h3 style="text-align: center;margin-bottom: 10px;">Configuração</h3>
+                <div id="modalConfiguracaoBody">
+                    <fieldset>
+                        <legend>Funções</legend>
+                        <label>
+                            <input type="checkbox" id="ConsoleErrosConfiguracao" style="height: 18px;width: 18px;"> Console errors
+                        </label>
+                        <br/>
+                        <label>
+                            <input type="checkbox" id="PrintscreenConfiguracao" style="height: 18px;width: 18px;"> Printscreen
+                        </label>
+                        <br/>
+                        <label>
+                            <input type="checkbox" id="ObterLinksConfiguracao" style="height: 18px;width: 18px;"> Obter links
+                        </label> <i class="fas fa-eye" onclick="abreLog()"></i>
+                        <br/>
+                    </fieldset>
+                    Usar urls obtidas da instancia: &nbsp;&nbsp;
+                    <select id="urlsInstancia" style="margin-top: -5px;">
+                        <option default>Selecione</option>
+                    </select>
+                </div>             
+                <div class="buttonsModal">
+                    <button class="btnEnviarConfiguracao" id="btnEnviarConfiguracao">Enviar</button>
+                    <button class="btnFecharModal" id="btnFecharModalConfiguracao">Fechar</button>
+                </div>
+            </div>
         </div>
 
         <script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
@@ -429,6 +805,12 @@
             let arrErroMontado = [];
             let selectDominio = [];
             let flagCount = true;
+            let IdEnviar;
+            let quantidadeInstancia;
+            let instancias;
+            let myStatusPrimeiraInstancia;
+            let myStatusSegundaInstancia;
+            let dt;
 
             $("#btnFiltrar").on("click",function(){                
                 filtrarPorDominio();                
@@ -444,6 +826,85 @@
                 filtrarPorDominio();
                 filtrarPorStatus();
             });
+
+            $("#btnFecharModalErros").on("click", function(){
+                $(".modalErros").eq(0).fadeOut();
+            });
+
+            $("#btnFecharModal").on("click", function(){
+                $(".modalLinks").eq(0).fadeOut();
+            });
+
+            $("#btnFecharModalConfiguracao").on("click", function(){
+                $(".modalConfiguracao").eq(0).fadeOut();
+            });
+
+            $(".btnControleCrawler").eq(0).on("click",function(){
+                let $aside = $("aside");
+                let $conteudo = $(".conteudo").eq(0);
+                if($aside.css("left") == "0px"){
+                    $aside.css("left","-30vw");
+                    $conteudo.css("width","100vw");
+                    $conteudo.css("margin-left","-30vw");
+                }else{
+                    $aside.css("left","0px");
+                    $conteudo.css("width","70vw");
+                    $conteudo.css("margin-left","0px");
+                }
+            });
+
+            $(".btnInstancias").eq(0).on("click",function(){
+                let $conteudo = $(".cardsStatus").eq(0);
+                if($conteudo.css("top") == "50px"){
+                    $conteudo.css("top","calc(100vh - 42px)");
+                }else{
+                    $conteudo.css("top","50px");
+                }
+            });
+
+            $("#filtroLinks").on("keyup",function(ev){
+                let $filtro = $("#filtroLinks");
+
+                if(ev.keyCode == 8 || ev.key == 46){
+                    $("#modalLinksBody>ul>li.disabled").map((e,i)=> i.innerText.includes($filtro.val()) ? i.className="" : "" );
+                }else{
+                    $("#modalLinksBody").children().children().map((e,i)=> !i.innerText.includes($filtro.val()) ? i.className="disabled" : i.className="" );
+                }
+
+                let qtdLinks = $("#modalLinksBody>ul>li[class='']").length;
+
+                $("#quantidadeLinks").html("Total de Links: " + qtdLinks);
+            });
+
+            $("#BuscarNaPagina").on("click",function(){
+                console.log("clicou");
+                let $inputBusca = $("#palavraChaveBusca");
+                if($inputBusca.css("height") == "0px"){
+                    $inputBusca.css("height","40px");
+                    $inputBusca.css("padding","5px 20px");
+                }else{
+                    $inputBusca.css("height","0px");
+                    $inputBusca.css("padding","0px");
+                }
+            });
+
+            $("#btnEnviarConfiguracao").on("click",function(){
+                let consoleError = $("#ConsoleErrosConfiguracao").prop("checked");
+                let printscreen = $("#PrintscreenConfiguracao").prop("checked");
+                let obterLinks = $("#ObterLinksConfiguracao").prop("checked");
+                let obterLinksRepetidos = $("#ObterLinksRepetidosConfiguracao").prop("checked");
+                let instancia = $("#urlsInstancia").val();
+                enviarConfiguracao(IdEnviar, consoleError, printscreen, obterLinks, obterLinksRepetidos, instancia);
+            });
+
+            function abreLog(){ 
+                getLinks();
+
+                $("#filtroLinks").val("");
+                $(".modalLinks").eq(0).css("display","flex");
+                let qtdLinks = $("#modalLinksBody>ul>li[class='']").length;
+                $("#quantidadeLinks").html("Total de Links: " + qtdLinks);
+            }
 
             function filtrarPorDominio(){
                 let dominio = $("#dominios").val();
@@ -599,7 +1060,7 @@
                             }
                             count++;
                             for(let j =0; j<data[i].erros.length ; j++){
-                                let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"' onclick='collapse(\"Err"+i+""+j+"\")'/></button>" : "";
+                                let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"'/ onclick=\"collapse(\'Err"+i+""+j+"\')\"></button>" : "";
                                                             
                                 if(data[i].erros[j].includes("PAGEERROR:")){
                                     let cor = "#bf6f6f";
@@ -663,7 +1124,69 @@
                 });                
             };
 
+            function montaModalErro(data){
+                let count = 0;
+                data.forEach((e,i)=>{
+                    
+                    let li = "";
+                    if(data[i].erros != undefined && data[i].erros != ""){
+                        count++;
+                        for(let j =0; j<data[i].erros.length ; j++){
+                            let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErrModal"+i+""+j+"' onclick='collapseModal(\"ErrModal"+i+""+j+"\")'/></button>" : "";
+                                                        
+                            if(data[i].erros[j].includes("PAGEERROR:")){
+                                let cor = "#bf6f6f";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap pageError' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|PAGEERROR", "PAGEERROR") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("REQUEST:")){
+                                let cor = "#6cb4ba";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap request' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|REQUEST", "REQUEST") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("CONSOLE")){
+                                let cor = "#d3d683";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap console' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|CONSOLE", "CONSOLE") +"</label>"+button+"</li>";
+                        
+                            }else if(data[i].erros[j].includes("RESPONSE")){
+                                let cor = "#d6b783";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap response' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|RESPONSE", "RESPONSE") +"</label>"+button+"</li>";
+                            }else{
+                                let cor = "#83d69a";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap generic' style='background-color:"+cor+"'><label>" + data[i].erros[j] +"</label>"+button+"</li>";
+                            }
+                        }
+                            
+                        $("#modalErrosBody").append(`
+                            <div class="item">
+                                <div class="header">
+                                    ` + e.dominio + `
+                                </div>
+                                <div class="content">
+                                    <p class="textWrap"><strong>Pagina:</strong> <label>` + e.pagina + `</label></p>
+                                    <p class="textWrap"><strong>Url:</strong> <label><a href="` + e.protocolo+"://"+e.dominio+e.pagina + `">` + e.protocolo+"://"+e.dominio+e.pagina + `</a></label></p>
+                                    <ul>
+                                        ` + li + `
+                                    </ul>
+                                </div>
+                            </div>
+                        `);
+                         
+                    }
+                });                
+            };
+
             function collapse(id){
+                console.log(id);
+                if($("#lbl"+id+"").hasClass("collapsed")){
+                    $("#lbl"+id+"").removeClass("collapsed");
+                    $("#img"+id+"").removeClass("collapsedImg");
+                }else{
+                    $("#lbl"+id+"").addClass("collapsed");
+                    $("#img"+id+"").addClass("collapsedImg");
+                }
+            }
+
+            function collapseModal(id){
+                console.log(id);
                 if($("#lbl"+id+"").hasClass("collapsed")){
                     $("#lbl"+id+"").removeClass("collapsed");
                     $("#img"+id+"").removeClass("collapsedImg");
@@ -674,27 +1197,50 @@
             }
 
             function startCrawler(){
+                let mostrarBrowser = $("#mostrarBrowser:checked").val() == "on";
                 let urlBase = $("#urlBase").val();
                 let palavrasChave = $("#palavrasChaves").val();
-                let protocolo = $("#protocolo").val();
-                let repetirUrl = $("#repetirUrl").val() == "on";
+                let repetirUrl = $("#repetirUrl:checked").val() == "on";
                 let numCrawlers = $("#numCrawlers").val();
-                console.log("asdasdasdasdasdad: " + numCrawlers);
-                
+                let excecoes = $("#palavrasExcecao").val();
+                let inputBusca = $("#palavraChaveBusca").val();
+                let valBusca = "__|__";
+
+                //Funções
+                let consoleError = $("#ConsoleErros:checked").val() == "on";
+                let printscreen = $("#Printscreen:checked").val() == "on";
+                let obterLinks = $("#ObterLinks:checked").val() == "on";
+                let buscarNaPagina = $("#BuscarNaPagina:checked").val() == "on";
+
                 if(!urlBase.includes("http") || !urlBase.includes("://")){
-                    urlBase = protocolo + "://" + urlBase;
+                    urlBase = "https://" + urlBase;
+                }
+
+                if(inputBusca.length > 0){
+                   valBusca = inputBusca; 
                 }
                 
                 if($("#urlBase").val() != null && $("#urlBase").val().length >= 6){
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers}, 
+                        data: { MostrarBrowser: mostrarBrowser,baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks, BuscarNaPagina:buscarNaPagina, PalavraBusca: valBusca}, 
                         success: function (data) {
 
                             verificaCrawler(true);
                             
-                            getLog();
+                            setTimeout(()=>{
+                                let $conteudo = $(".cardsStatus").eq(0);
+                                if($conteudo.css("top") != "50px"){
+                                    $conteudo.css("top","50px");
+                                }
+                            },2000);
+
+                            setTimeout(()=>{
+                                getLog();
+                            },10000);
+                            
+                            
                         },
                         error: function(data){
                             console.log("Error: ",data);
@@ -719,9 +1265,6 @@
                 
             }
 
-            let myStatusPrimeiraInstancia;
-            let myStatusSegundaInstancia;
-
             function verificaCrawler(bool){
                 let tempo = 0;
                 if(bool){
@@ -731,15 +1274,26 @@
                 setTimeout(()=>{
                     $.get("/statusCrawler", function(data){
                         if(data.length > 0){
+                            quantidadeInstancia = data.length;
+                            instancias = data;
                             $("#cardsStatus").html("");
                             data.map(e=>{
+                                let consoleError = e.Funcoes.ConsoleError == "true" ? "<i class='fas fa-bug' onclick='getConsoleError(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
+                                let printscreen = e.Funcoes.Printscreen == "true" ? "<i class='fas fa-print'></i>" : "";
+                                let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link' onclick='getLinksInstancia(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
+                                let obterLinksRepetidos = e.Funcoes.ObterLinksRepetidos == "true" ? "<i class='fas fa-redo-alt'></i>" : "";
+                                let acessados = "<i class='fas fa-clipboard-list' onclick='pegarUrlsAcessadas(\"" + e.Id  + "\")' style='cursor: pointer;'></i>";
+                                let configuracao = "<i class='fas fa-cog' onclick='configuracaoInstancia(\"" + e.Id + "\"," + e.Funcoes.ConsoleError + "," + e.Funcoes.Printscreen + "," + e.Funcoes.ObterLinks + "," + e.Funcoes.ObterLinksRepetidos + ")' style='cursor: pointer;'></i>";
+                                let seguintes = "<i class='fab fa-buffer' onclick='getUrlsRestante(\"" + e.Id + "\")' style='cursor: pointer;'></i>";
+
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
-                                    <div class="pagina">
-                                        ` + e.Pagina + `
-                                    </div>
+                                    <label class='idInstancia'>` + e.Id + `</label>
                                     <div style="display: flex;">
                                         <div>
+                                            <div class="pagina">
+                                                ` + e.Pagina + `
+                                            </div>
                                             <div class="statusHeader">
                                                 Status: <label id="rodando` + e.Id + `"></label>
                                             </div>
@@ -751,20 +1305,31 @@
                                                 <div id="tempo` + e.Id + `">
                                                 </div>
                                             </div>
+                                            <div class="funcoes">
+                                                `
+                                                +
+                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + acessados  + seguintes + configuracao
+                                                +
+                                                `
+                                            </div>
                                         </div>
                                         <div style="display: flex;justify-content: center;align-items: center;">
                                             <div class="acao">
                                                 <button onclick="deletarCrawler(` + e.Id + `)"><i class="fas fa-trash"></i></button>
                                                 <button onclick="stopCrawler(` + e.Id + `)"><i class="fas fa-stop"></i></button>
+                                                <button id='pausar` + e.Id + `' onclick="pausarCrawler(` + e.Id + `)"><i class="fas fa-pause"></i></button>
+                                                <button id='continuar` + e.Id + `' onclick="continuarCrawler(` + e.Id + `)" style='display:none;'><i class="fas fa-play"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 `);
                             });
+
                             myStatusPrimeiraInstancia = setInterval(() => {
                                 $.get("/statusCrawler", function(data){
                                     statusCrawler(data);
+                                    $(".btnInstancias").eq(0).html("Instancias - " + data.length);
                                 });
                             }, 1000);
                         }
@@ -790,31 +1355,38 @@
                     let montaTempo = hora + ":" + min + ":" + sec;
                     $("#tempo" + e.Id).html(montaTempo);
                     $("#rodando" + e.Id).html(e.Rodando ? "Rodando" : "Parado");
-                    $("#status" + e.Id).css("background-color","#83d69a");
-                    e.Rodando ? "" : $("#status" + e.Id).css("background-color","#e68b8b");
-
+                    $("#rodando" + e.Id).html(e.Pausado ? "Pausado" : e.Rodando ? "Rodando" : "Parado");
+                    
+                    e.Rodando ? e.Pausado ? $("#status" + e.Id).css("background-color","#dfde80") : $("#status" + e.Id).css("background-color","#83d69a") : $("#status" + e.Id).css("background-color","#e68b8b");
                 });
 
             }
             
-            let dt;
             function getLog(){
                 $.get("/getLog", function(data){
                     montaTela(data);
                 });
 
                 $.get("/statusCrawler", function(data){
-                    if(data.Rodando){
+                    if(data.some(e=>e.Rodando)){
                         setInterval(() => {
                             $.get("/getLog", function(data){
                                 montaTela(data);
                             });
                         }, 10000);
                     }
-                });
-                
+                });  
             }
 
+            function getLinks(){
+                $.get("/getLinks", function(data){
+                    let lista = "";
+                    data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
+                    $("#modalLinksBody").html("<ul>" + lista + "</ul>");
+                    $("#quantidadeLinks").html("");  
+                });
+            }
+            
             function stopCrawler(instancia){
                 $.ajax({ 
                         type: 'POST', 
@@ -831,11 +1403,46 @@
 
             function deletarCrawler(instancia){
                 $.ajax({ 
+                    type: 'POST', 
+                    url: '/deleteCrawler', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $("#status" + instancia).fadeOut();
+                        setTimeout(()=>{$("#status" + instancia).remove()},1000);                
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+
+            function pausarCrawler(instancia){
+                $("#pausar"+instancia).css("display","none");
+                $("#continuar"+instancia).css("display","block");
+
+                $.ajax({ 
                         type: 'POST', 
-                        url: '/deleteCrawler', 
+                        url: '/pausarCrawler', 
                         data: { instancia: instancia}, 
                         success: function (data) {
-                            $("#status" + instancia).remove();                
+                            
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+
+            function continuarCrawler(instancia){
+                $("#pausar"+instancia).css("display","block");
+                $("#continuar"+instancia).css("display","none");
+
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/continuarCrawler', 
+                        data: { instancia: instancia}, 
+                        success: function (data) {
+                            
                         },
                         error: function(data){
                             console.log("Error: ",data);
@@ -843,6 +1450,108 @@
                     });
             }
         
+            function getConsoleError(instancia){
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/getConsoleError', 
+                        data: { InstanciaResponsavel: instancia}, 
+                        success: function (data) {
+                            $(".modalErros").eq(0).css("display","flex");
+                            montaModalErro(data);
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+            
+            function getLinksInstancia(instancia){
+                $.ajax({ 
+                        type: 'POST', 
+                        url: '/getLinksInstancia', 
+                        data: { InstanciaResponsavel: instancia}, 
+                        success: function (data) {
+                            $("#filtroLinks").val("");
+                            $(".modalLinks").eq(0).css("display","flex");
+                            let lista = "";
+                            data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
+                            $("#modalLinksBody").html("<ul>" + lista + "</ul>");            
+                            $("#quantidadeLinks").html("Total de Links: " + data.length);            
+                        },
+                        error: function(data){
+                            console.log("Error: ",data);
+                        }
+                    });
+            }
+
+            function configuracaoInstancia(Id,ConsoleError,Printscreen,ObterLinks,ObterLinksRepetidos){
+                $(".modalConfiguracao").eq(0).css("display","flex");
+                $("#ConsoleErrosConfiguracao").prop("checked",ConsoleError);
+                $("#PrintscreenConfiguracao").prop("checked",Printscreen);
+                $("#ObterLinksConfiguracao").prop("checked",ObterLinks);
+                $("#ObterLinksRepetidosConfiguracao").prop("checked",ObterLinksRepetidos);
+                $("#urlsInstancia").html("");
+                $("#urlsInstancia").append("<option>Selecione</option>")
+                instancias.forEach(e=> $("#urlsInstancia").append("<option>"+e.Id+"</option>"));
+                
+                IdEnviar = Id;
+            }
+
+            function enviarConfiguracao(Id,ConsoleError,Printscreen,ObterLinks,ObterLinksRepetidos, instanciaNova){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/alterarInstancia', 
+                    data: { instancia: Id, ConsoleError:ConsoleError,Printscreen:Printscreen,ObterLinks:ObterLinks,ObterLinksRepetidos:ObterLinksRepetidos, InstanciaNova: instanciaNova}, 
+                    success: function (data) {
+                        verificaCrawler();
+                        $("#btnFecharModalConfiguracao").trigger("click");
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+           
+            function pegarUrlsAcessadas(instancia){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/pegarUrlsAcessadas', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $("#filtroLinks").val("");
+                        $("#tituloModalLinks").html("Links acessados");
+                        $(".modalLinks").eq(0).css("display","flex");
+                        let lista = "";
+                        data.forEach(e=>lista+= "<li>" + e + "</li>")
+                        $("#modalLinksBody").html("<ul>" + lista + "</ul>");        
+                        $("#quantidadeLinks").html("Total de Links: " + data.length);           
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+
+            function getUrlsRestante(instancia){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/pegarUrlsRestante', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $("#filtroLinks").val("");
+                        $("#tituloModalLinks").html("Links restantes a serem acessados");
+                        $(".modalLinks").eq(0).css("display","flex");
+                        let lista = "";
+                        data.forEach(e=>lista+= "<li>" + e + "</li>")
+                        $("#modalLinksBody").html("<ul>" + lista + "</ul>");        
+                        $("#quantidadeLinks").html("Total de Links: " + data.length);           
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
+
         </script>
     </body>
 </html>

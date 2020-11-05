@@ -1593,3 +1593,207 @@
 [0930/135708.849:ERROR:file_io_win.cc(162)] CreateFile C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-BqHnwS\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
 [0930/135709.007:ERROR:file_io_win.cc(171)] CreateFile C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-BqHnwS\Crashpad\reports\7363f649-4cde-4f3f-b747-6c2a38cc3af0.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
 [0930/135709.060:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[1015/170508.440:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-wj2WVe\Crashpad\attachments\fbb251ee-c272-4da0-bdba-7e47ed59fc40: O sistema não pode encontrar o caminho especificado. (0x3)
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 73548
+[1015/170508.465:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1015/171415.917:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1015/174101.310:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/161745.640:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/161825.775:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1016/161825.776:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1016/161825.776:ERROR:exception_snapshot_win.cc(99)] thread ID 75200 not found in process
+[1016/162812.733:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/164207.178:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/171009.248:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-dz2WXf\Crashpad\attachments\a8023778-e05d-488e-955f-c0d4eaefd365: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/172711.198:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/175118.090:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-xr1ytP\Crashpad\attachments\a9870d98-a9e4-4db6-b8d8-88b31928a06d: O sistema não pode encontrar o caminho especificado. (0x3)
+[1016/181920.662:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1019/153624.249:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1026/153913.605:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1028/173956.494:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1028/185405.479:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1028/223151.855:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/142548.370:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/151209.611:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/161153.016:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/162844.176:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1029/210046.875:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/225722.467:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/142813.253:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-lZDBA0\Crashpad\attachments\b9ff903a-e2e4-4c29-9bf2-35ef4fd300e4: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/142813.261:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/142813.261:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 165288
+[1030/142813.261:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/144348.180:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1030/144348.634:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-JV8aRw\Crashpad\attachments\96ed8584-e4e4-466d-8651-dd007dc39b8a: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/144348.639:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/144348.639:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 162256
+[1030/144348.639:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/144559.044:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-c3w4Y8\Crashpad\attachments\173ae958-8a8a-4d2c-8667-7a1155ccd0ae: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/144559.050:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/144559.050:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 132308
+[1030/144559.050:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/145336.671:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1030/145337.110:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-6DM1aa\Crashpad\attachments\b86515fb-18d4-4bad-8657-5f4eae440df4: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/145337.115:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/145337.115:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 58180
+[1030/145337.115:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/150638.328:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-bNRmJP\Crashpad\attachments\639b8d43-8907-42d2-8c6c-7e3d23ec9c80: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/150638.335:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/150638.335:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 78348
+[1030/150638.335:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/151315.395:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-9kPM9D\Crashpad\attachments\979e5e8b-7e2e-490e-9397-e2c0ecab3f5c: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/151315.400:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/151315.401:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 118404
+[1030/151315.401:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/151817.204:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-pRcVq0\Crashpad\attachments\068fd164-e0e2-4084-a428-409bb8b2e236: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/151817.209:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/151817.209:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 105728
+[1030/151817.209:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/152012.703:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-sLXssL\Crashpad\attachments\34a445b9-96dd-4402-992c-2a33159f93f6: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/152012.708:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/152012.708:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 126140
+[1030/152012.708:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/152137.344:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-9Qclqh\Crashpad\attachments\71b253be-91b4-406a-89ad-38bd9572d39a: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/152137.350:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/152137.350:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 75880
+[1030/152137.350:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/153112.954:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/153856.274:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-vh76xQ\Crashpad\attachments\9c669313-8cfd-44b4-a609-d4aa15e66b8c: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/153856.281:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/153856.281:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 164500
+[1030/153856.281:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/154634.237:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1030/154637.711:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-GSt0kl\Crashpad\attachments\67215fc6-4f27-422b-b1e0-e0805f44f9fb: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/154637.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/154637.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 168796
+[1030/154637.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/155245.178:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-4o24am\Crashpad\attachments\e0564f85-9917-46b3-8241-481a7399ebc2: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/155245.183:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/155245.183:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 167904
+[1030/155245.183:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/171433.333:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/182742.944:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-n1Nn97\Crashpad\attachments\4adb0b37-37cd-4988-bf04-fd29ca0d0534: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/182742.970:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/182742.971:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 171760
+[1030/182742.971:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/184940.987:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-wVldKn\Crashpad\attachments\b8986ade-390a-4319-b066-7d64866f77db: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/184941.005:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/184941.005:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 7568
+[1030/184941.005:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/185503.163:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-NctwGu\Crashpad\attachments\f138b6e5-8a3e-441a-ac8d-7c04c9f0e8f2: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/185503.198:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1030/185503.198:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 64672
+[1030/185503.198:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1030/190641.872:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/211825.209:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1030/214149.205:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/111338.328:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/125012.813:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-mXaolm\Crashpad\attachments\e2c6da04-b4ac-4d1c-8cb9-25a00b149e46: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/125012.876:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1031/125012.876:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 173100
+[1031/125012.876:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1031/125426.713:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1031/125427.139:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-VoSFRI\Crashpad\attachments\d5b5b8be-1184-456c-9b9c-ca9cc63377bb: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/125427.144:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1031/125427.144:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 157820
+[1031/125427.144:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1031/125529.228:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-hJiXvU\Crashpad\attachments\d99442e1-5792-4b87-b9a3-263d8fce93fa: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/125529.234:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1031/125529.234:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 97076
+[1031/125529.234:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1031/130019.599:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-ylGvZ4\Crashpad\attachments\f85a0d4a-6a18-4b64-b02c-909fa1f4277f: O sistema não pode encontrar o caminho especificado. (0x3)
+[1031/130019.604:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1031/130019.604:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 31176
+[1031/130019.604:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/163447.617:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-UVjpvR\Crashpad\attachments\715762e2-043a-4110-bd29-f2c6c482133a: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/163447.637:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/163447.637:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 157216
+[1103/163447.637:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/163854.707:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/165430.082:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-7XEqjY\Crashpad\attachments\5c8a538e-d879-4323-bcdc-1544a4cd2b16: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/165430.106:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/165430.106:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 62788
+[1103/165430.106:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/173107.345:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-atQZZU\Crashpad\attachments\123340bb-ee89-442b-ba39-cd77ab1e5238: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/173107.365:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/173107.365:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 60956
+[1103/173107.365:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/201915.350:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-ars5Lf\Crashpad\attachments\6659c137-ee21-4304-8728-4434c803b947: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/201915.378:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/201915.378:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 82604
+[1103/201915.378:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/203049.131:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-PozRnP\Crashpad\attachments\8e12f990-491c-4dce-bf09-85fe701f7137: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/203049.172:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/203049.172:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 69940
+[1103/203049.172:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/203258.186:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/205431.685:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-VyGgCU\Crashpad\attachments\83ef65e1-e8a6-4382-a9fe-71aa72be4986: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/205431.691:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/205431.691:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 61228
+[1103/205431.691:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/210248.735:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-QFK7Tq\Crashpad\attachments\cca4a83a-067d-411f-8539-1fe1bbffa0dc: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/210248.751:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/210248.751:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 149124
+[1103/210248.751:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1103/210434.148:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-mX7fQE\Crashpad\attachments\ac1e7fea-6eeb-49bd-9c22-59e111200a40: O sistema não pode encontrar o caminho especificado. (0x3)
+[1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 124632
+[1103/210434.154:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/140225.722:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-RWOchy\Crashpad\attachments\86f47f39-c3c8-4bd1-b3bd-d0b56788e8ec: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/140225.810:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/140225.810:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 64844
+[1104/140225.811:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/140419.062:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1104/140419.253:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-GDH3dd\Crashpad\attachments\4f9c84b2-8965-49b2-8fdb-12a5d96f1a07: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 175160
+[1104/140419.258:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/161026.604:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-s39bEM\Crashpad\attachments\bcb86e60-7d0b-48d1-9792-2a598d238321: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/161026.630:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1104/161026.631:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 94760
+[1104/161026.631:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1104/173748.314:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/174216.150:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1104/175635.058:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/210042.778:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/233122.435:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1105/125550.419:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1105/143126.255:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-8p7n66\Crashpad\attachments\f429ccee-6091-4b93-b707-1b3f7982151d: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/143126.360:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/143126.360:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 121568
+[1105/143126.360:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/143636.713:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-rVjz8r\Crashpad\attachments\c5826726-1137-4af7-a742-23d98470f5ab: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/143636.721:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/143636.721:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 69256
+[1105/143636.721:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/144217.926:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-h9y9Pp\Crashpad\attachments\607b0ee8-8dfe-448d-9ba5-a5158838c07f: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/144217.932:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/144217.932:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 174884
+[1105/144217.932:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/145135.959:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-9hqiYI\Crashpad\attachments\a444ab16-9c0b-476a-91d1-fe536e3c54ed: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/145135.965:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/145135.965:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 175820
+[1105/145135.966:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/145416.111:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-YsHi99\Crashpad\attachments\f272eb81-c364-4936-a428-e9ecbcc0c976: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/145416.117:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/145416.117:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 36284
+[1105/145416.117:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/150055.080:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-sVoFFk\Crashpad\attachments\b9f58eb5-b48b-4be3-ab27-a4e52f3561fd: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/150055.095:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/150055.095:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 30608
+[1105/150055.095:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/150958.380:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/155709.939:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-N0YcLX\Crashpad\attachments\91c274c5-2251-46fe-8e66-a1fc4261f3ca: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/155709.978:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/155709.978:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 116648
+[1105/155709.978:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/164109.928:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-Iy33L4\Crashpad\attachments\571a54de-858e-49c7-b9bf-0a9f57fc7d8a: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/164109.955:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/164109.955:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 99940
+[1105/164109.955:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/164337.269:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\096045.MGR\AppData\Local\Temp\puppeteer_dev_chrome_profile-qg8ySm\Crashpad\attachments\b7bb1ac6-a50e-4bf6-ab88-cba7ae1219c8: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/164337.276:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[1105/164337.276:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 123232
+[1105/164337.276:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[1105/165220.621:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
