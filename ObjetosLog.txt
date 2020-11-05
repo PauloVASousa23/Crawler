@@ -1,0 +1,70 @@
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/presencial/",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/presencial/vestibular/",
+	"protocolo": "https",
+	"erros": ["PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/custom.js:2:1|","|PAGEERROR: ReferenceError: $ is not defined at https://www.unip.br/presencial/includes/js/log-aluno.js:3:1|","|CONSOLE: Mixed Content: The page at 'https://unip.br/presencial/vestibular/' was loaded over HTTPS, but requested an insecure script 'http://code.jquery.com/jquery-3.3.1.min.js'. This request has been blocked; the content must be served over HTTPS.|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:118 at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.min.js:8:126|","|PAGEERROR: ReferenceError: jQuery is not defined at https://unip.br/presencial/vestibular/Scripts/bootstrap-datepicker.pt-BR.min.js:1:493|","|PAGEERROR: ReferenceError: $ is not defined at https://unip.br/presencial/vestibular/:481:5|","|RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/ead",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|CONSOLE: Failed to load resource: the server responded with a status of 404 ()|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|RESPONSE: 451: https://idsync.rlcdn.com/361087.gif?partner_uid=c2c65fa3-27a7-4900-92fc-de20cb6509f2|","|CONSOLE: Failed to load resource: the server responded with a status of 451 ()|","|REQUEST: net::ERR_TUNNEL_CONNECTION_FAILED https://px.powerlinks.com/user/sync/dsps?userId=c2c65fa3-27a7-4900-92fc-de20cb6509f2&sourceId=aa4e7548-789b-4df8-a72f-d951a5b206eb|","|CONSOLE: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED|","|RESPONSE: 303: https://i.liadm.com/s/37464?bidder_id=7156&bidder_uuid=c2c65fa3-27a7-4900-92fc-de20cb6509f2|","|RESPONSE: 303: https://i.liadm.com/s/37464?bidder_id=7156&bidder_uuid=c2c65fa3-27a7-4900-92fc-de20cb6509f2&_li_chk=true&previous_uuid=f43a3a56ea7a4decb6bc7c4183dc91ef"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/Ead/processoseletivo/inscrevase",
+	"protocolo": "https",
+	"erros": ["REQUEST: net::ERR_ABORTED https://uipglob.semasio.net/tradedesk/1/info?sType=sync&gdpr=0&gdpr_consent=&sInitiator=internal&sExtCookieId=d2fe3126-1db5-42c8-a257-577e4a728834"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/transferenciaimediata/",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/presencial/ensino/pos_graduacao/strictosensu/index.aspx",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|PAGEERROR: TypeError: $(...).kendoChat is not a function at defineCustomKendoChatAgent (https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=5983e052-d02d-44c8-bf8a-cb73bcaa1440:1:5762) at https://cronchatunip.cronapp.io/get-chat/agent?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo&conversationId=5983e052-d02d-44c8-bf8a-cb73bcaa1440:1:6002"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/Ead",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|CONSOLE: Failed to load resource: the server responded with a status of 404 ()|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.woff|","|RESPONSE: 404: https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf|","|REQUEST: net::ERR_ABORTED https://unip.br/Ead/Assets/Styles/stylesheets/fonts/ico-unip.ttf"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/presencial/",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},
+{
+	"instancia": "1604528036665",
+	"dominio": "unip.br",
+	"pagina": "/presencial/servicos/aluno/como_acessar.aspx",
+	"protocolo": "https",
+	"erros": ["RESPONSE: 503: https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9|","|CONSOLE: Failed to load resource: the server responded with a status of 503 ()|","|REQUEST: net::ERR_ABORTED https://www.dataunion.com.br/73f7586d-5a25-4063-8f27-8b94347ae2a9"]
+},

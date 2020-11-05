@@ -10,6 +10,7 @@
                 box-sizing: border-box;
                 font-family: cursive;
             }
+
             body{
                 background: linear-gradient(340deg, #202c51, #1c3da2);
                 display: flex;
@@ -33,6 +34,7 @@
                 height: 100vh;
                 width: 70vw;
                 transition: 1s;
+                padding-left: 15px;
             }
 
             .divHr{
@@ -92,7 +94,7 @@
                 margin: 20px 5px;
                 filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.5));
                 transition: .5s;
-                z-index: -1;
+                z-index: 0;
             }
 
             .header{
@@ -141,6 +143,12 @@
             input{
                 width: 115px;
                 color: transparent;
+            }
+
+            #filtroLinks{
+                width: calc(100% - 200px);
+                margin-left: 100px;
+                margin-top: 20px;
             }
 
             label{
@@ -469,6 +477,10 @@
                 padding: 30px;
             }
 
+            #modalErrosBody > .item{
+                z-index: 999;
+            }
+
             .modalConfiguracao{
                 display: none;
                 justify-content: center;
@@ -676,8 +688,9 @@
                 </label> <i class="fas fa-eye" onclick="abreLog()"></i>
                 <br/>
                 <label>
-                    <input type="checkbox" id="ObterLinksRepetidos" style="height: 18px;width: 18px;"> Obter links repetidos
-                </label>
+                    <input type="checkbox" id="BuscarNaPagina" style="height: 18px;width: 18px;"> Buscar na pagina
+                </label> <input type="text" placeholder="Separe por ;" id="palavraChaveBusca" style="height: 0px;width: 100%; transition: .5s;padding: 0px;">
+                <br/>
             </fieldset>
 
             <div style="display: flex;justify-content: center;align-items: center;">
@@ -729,8 +742,9 @@
 
         <div class="modalLinks">
             <div class="modalLinksBody">
-                <h3 style="text-align: center;margin-bottom: 10px;">Todos os links acessados</h3>
+                <h3 style="text-align: center;margin-bottom: 10px;" id="tituloModalLinks">Todos os links acessados</h3>
                 <hr style="width: 50%;margin: auto;"/>
+                <input type="text" id="filtroLinks" placeholder="Filtrar links">
                 <h3 style="text-align: center;margin-bottom: 10px;margin-top: 10px;" id="quantidadeLinks"></h3>
                 <div id="modalLinksBody">
 
@@ -767,9 +781,6 @@
                             <input type="checkbox" id="ObterLinksConfiguracao" style="height: 18px;width: 18px;"> Obter links
                         </label> <i class="fas fa-eye" onclick="abreLog()"></i>
                         <br/>
-                        <label>
-                            <input type="checkbox" id="ObterLinksRepetidosConfiguracao" style="height: 18px;width: 18px;"> Obter links repetidos
-                        </label>
                     </fieldset>
                     Usar urls obtidas da instancia: &nbsp;&nbsp;
                     <select id="urlsInstancia" style="margin-top: -5px;">
@@ -794,6 +805,12 @@
             let arrErroMontado = [];
             let selectDominio = [];
             let flagCount = true;
+            let IdEnviar;
+            let quantidadeInstancia;
+            let instancias;
+            let myStatusPrimeiraInstancia;
+            let myStatusSegundaInstancia;
+            let dt;
 
             $("#btnFiltrar").on("click",function(){                
                 filtrarPorDominio();                
@@ -845,9 +862,31 @@
                 }
             });
 
-            let IdEnviar;
-            let quantidadeInstancia;
-            let instancias;
+            $("#filtroLinks").on("keyup",function(ev){
+                let $filtro = $("#filtroLinks");
+
+                if(ev.keyCode == 8 || ev.key == 46){
+                    $("#modalLinksBody>ul>li.disabled").map((e,i)=> i.innerText.includes($filtro.val()) ? i.className="" : "" );
+                }else{
+                    $("#modalLinksBody").children().children().map((e,i)=> !i.innerText.includes($filtro.val()) ? i.className="disabled" : i.className="" );
+                }
+
+                let qtdLinks = $("#modalLinksBody>ul>li[class='']").length;
+
+                $("#quantidadeLinks").html("Total de Links: " + qtdLinks);
+            });
+
+            $("#BuscarNaPagina").on("click",function(){
+                console.log("clicou");
+                let $inputBusca = $("#palavraChaveBusca");
+                if($inputBusca.css("height") == "0px"){
+                    $inputBusca.css("height","40px");
+                    $inputBusca.css("padding","5px 20px");
+                }else{
+                    $inputBusca.css("height","0px");
+                    $inputBusca.css("padding","0px");
+                }
+            });
 
             $("#btnEnviarConfiguracao").on("click",function(){
                 let consoleError = $("#ConsoleErrosConfiguracao").prop("checked");
@@ -858,9 +897,13 @@
                 enviarConfiguracao(IdEnviar, consoleError, printscreen, obterLinks, obterLinksRepetidos, instancia);
             });
 
-            function abreLog(){
+            function abreLog(){ 
                 getLinks();
+
+                $("#filtroLinks").val("");
                 $(".modalLinks").eq(0).css("display","flex");
+                let qtdLinks = $("#modalLinksBody>ul>li[class='']").length;
+                $("#quantidadeLinks").html("Total de Links: " + qtdLinks);
             }
 
             function filtrarPorDominio(){
@@ -1017,7 +1060,7 @@
                             }
                             count++;
                             for(let j =0; j<data[i].erros.length ; j++){
-                                let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"' onclick='collapse(\"Err"+i+""+j+"\")'/></button>" : "";
+                                let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"'/ onclick=\"collapse(\'Err"+i+""+j+"\')\"></button>" : "";
                                                             
                                 if(data[i].erros[j].includes("PAGEERROR:")){
                                     let cor = "#bf6f6f";
@@ -1089,26 +1132,26 @@
                     if(data[i].erros != undefined && data[i].erros != ""){
                         count++;
                         for(let j =0; j<data[i].erros.length ; j++){
-                            let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErr"+i+""+j+"' onclick='collapse(\"Err"+i+""+j+"\")'/></button>" : "";
+                            let button = data[i].erros[j].length >= 77 ? "<button class='btnCollpase'><img src='https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-Down-PNG-Transparent-Image.png' id='imgErrModal"+i+""+j+"' onclick='collapseModal(\"ErrModal"+i+""+j+"\")'/></button>" : "";
                                                         
                             if(data[i].erros[j].includes("PAGEERROR:")){
                                 let cor = "#bf6f6f";
-                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap pageError' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|PAGEERROR", "PAGEERROR") +"</label>"+button+"</li>";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap pageError' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|PAGEERROR", "PAGEERROR") +"</label>"+button+"</li>";
                         
                             }else if(data[i].erros[j].includes("REQUEST:")){
                                 let cor = "#6cb4ba";
-                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap request' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|REQUEST", "REQUEST") +"</label>"+button+"</li>";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap request' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|REQUEST", "REQUEST") +"</label>"+button+"</li>";
                         
                             }else if(data[i].erros[j].includes("CONSOLE")){
                                 let cor = "#d3d683";
-                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap console' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|CONSOLE", "CONSOLE") +"</label>"+button+"</li>";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap console' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|CONSOLE", "CONSOLE") +"</label>"+button+"</li>";
                         
                             }else if(data[i].erros[j].includes("RESPONSE")){
                                 let cor = "#d6b783";
-                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap response' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|RESPONSE", "RESPONSE") +"</label>"+button+"</li>";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap response' style='background-color:"+cor+"'><label>" + data[i].erros[j].replace("|RESPONSE", "RESPONSE") +"</label>"+button+"</li>";
                             }else{
                                 let cor = "#83d69a";
-                                li = li + "<li id='lblErr"+i+""+j+"' class='textWrap generic' style='background-color:"+cor+"'><label>" + data[i].erros[j] +"</label>"+button+"</li>";
+                                li = li + "<li id='lblErrModal"+i+""+j+"' class='textWrap generic' style='background-color:"+cor+"'><label>" + data[i].erros[j] +"</label>"+button+"</li>";
                             }
                         }
                             
@@ -1132,6 +1175,18 @@
             };
 
             function collapse(id){
+                console.log(id);
+                if($("#lbl"+id+"").hasClass("collapsed")){
+                    $("#lbl"+id+"").removeClass("collapsed");
+                    $("#img"+id+"").removeClass("collapsedImg");
+                }else{
+                    $("#lbl"+id+"").addClass("collapsed");
+                    $("#img"+id+"").addClass("collapsedImg");
+                }
+            }
+
+            function collapseModal(id){
+                console.log(id);
                 if($("#lbl"+id+"").hasClass("collapsed")){
                     $("#lbl"+id+"").removeClass("collapsed");
                     $("#img"+id+"").removeClass("collapsedImg");
@@ -1148,22 +1203,28 @@
                 let repetirUrl = $("#repetirUrl:checked").val() == "on";
                 let numCrawlers = $("#numCrawlers").val();
                 let excecoes = $("#palavrasExcecao").val();
+                let inputBusca = $("#palavraChaveBusca").val();
+                let valBusca = "__|__";
 
                 //Funções
                 let consoleError = $("#ConsoleErros:checked").val() == "on";
                 let printscreen = $("#Printscreen:checked").val() == "on";
                 let obterLinks = $("#ObterLinks:checked").val() == "on";
-                let obterLinksRepetidos = $("#ObterLinksRepetidos:checked").val() == "on";
+                let buscarNaPagina = $("#BuscarNaPagina:checked").val() == "on";
 
                 if(!urlBase.includes("http") || !urlBase.includes("://")){
                     urlBase = "https://" + urlBase;
+                }
+
+                if(inputBusca.length > 0){
+                   valBusca = inputBusca; 
                 }
                 
                 if($("#urlBase").val() != null && $("#urlBase").val().length >= 6){
                     $.ajax({ 
                         type: 'POST', 
                         url: '/startCrawler', 
-                        data: { MostrarBrowser: mostrarBrowser,baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks,ObterLinksRepetidos: obterLinksRepetidos}, 
+                        data: { MostrarBrowser: mostrarBrowser,baseUrl: urlBase,palavrasChave: palavrasChave, repetirUrl: repetirUrl, simultaneos: numCrawlers,excecoes: excecoes, ConsoleError: consoleError, Printscreen: printscreen, ObterLinks: obterLinks, BuscarNaPagina:buscarNaPagina, PalavraBusca: valBusca}, 
                         success: function (data) {
 
                             verificaCrawler(true);
@@ -1204,9 +1265,6 @@
                 
             }
 
-            let myStatusPrimeiraInstancia;
-            let myStatusSegundaInstancia;
-
             function verificaCrawler(bool){
                 let tempo = 0;
                 if(bool){
@@ -1224,8 +1282,9 @@
                                 let printscreen = e.Funcoes.Printscreen == "true" ? "<i class='fas fa-print'></i>" : "";
                                 let obterLinks = e.Funcoes.ObterLinks == "true" ? "<i class='fas fa-link' onclick='getLinksInstancia(\"" + e.Timestamp + "\")' style='cursor: pointer;'></i>" : "";
                                 let obterLinksRepetidos = e.Funcoes.ObterLinksRepetidos == "true" ? "<i class='fas fa-redo-alt'></i>" : "";
+                                let acessados = "<i class='fas fa-clipboard-list' onclick='pegarUrlsAcessadas(\"" + e.Id  + "\")' style='cursor: pointer;'></i>";
                                 let configuracao = "<i class='fas fa-cog' onclick='configuracaoInstancia(\"" + e.Id + "\"," + e.Funcoes.ConsoleError + "," + e.Funcoes.Printscreen + "," + e.Funcoes.ObterLinks + "," + e.Funcoes.ObterLinksRepetidos + ")' style='cursor: pointer;'></i>";
-                                let seguintes = "<i class='fas fa-server' onclick='getUrlsRestante(\"" + e.Id + "\")' style='cursor: pointer;'></i>";
+                                let seguintes = "<i class='fab fa-buffer' onclick='getUrlsRestante(\"" + e.Id + "\")' style='cursor: pointer;'></i>";
 
                                 $("#cardsStatus").append(`
                                 <div class="cardStatusCrawler" id="status` + e.Id + `">
@@ -1249,7 +1308,7 @@
                                             <div class="funcoes">
                                                 `
                                                 +
-                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + configuracao + seguintes
+                                                    consoleError + printscreen + obterLinks + obterLinksRepetidos + acessados  + seguintes + configuracao
                                                 +
                                                 `
                                             </div>
@@ -1303,7 +1362,6 @@
 
             }
             
-            let dt;
             function getLog(){
                 $.get("/getLog", function(data){
                     montaTela(data);
@@ -1325,6 +1383,7 @@
                     let lista = "";
                     data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
                     $("#modalLinksBody").html("<ul>" + lista + "</ul>");
+                    $("#quantidadeLinks").html("");  
                 });
             }
             
@@ -1397,7 +1456,6 @@
                         url: '/getConsoleError', 
                         data: { InstanciaResponsavel: instancia}, 
                         success: function (data) {
-                            console.log(data);    
                             $(".modalErros").eq(0).css("display","flex");
                             montaModalErro(data);
                         },
@@ -1413,6 +1471,7 @@
                         url: '/getLinksInstancia', 
                         data: { InstanciaResponsavel: instancia}, 
                         success: function (data) {
+                            $("#filtroLinks").val("");
                             $(".modalLinks").eq(0).css("display","flex");
                             let lista = "";
                             data.forEach(e=>lista+= "<li>" + e.Url + "</li>")
@@ -1452,6 +1511,26 @@
                     }
                 });
             }
+           
+            function pegarUrlsAcessadas(instancia){
+                $.ajax({ 
+                    type: 'POST', 
+                    url: '/pegarUrlsAcessadas', 
+                    data: { instancia: instancia}, 
+                    success: function (data) {
+                        $("#filtroLinks").val("");
+                        $("#tituloModalLinks").html("Links acessados");
+                        $(".modalLinks").eq(0).css("display","flex");
+                        let lista = "";
+                        data.forEach(e=>lista+= "<li>" + e + "</li>")
+                        $("#modalLinksBody").html("<ul>" + lista + "</ul>");        
+                        $("#quantidadeLinks").html("Total de Links: " + data.length);           
+                    },
+                    error: function(data){
+                        console.log("Error: ",data);
+                    }
+                });
+            }
 
             function getUrlsRestante(instancia){
                 $.ajax({ 
@@ -1459,6 +1538,8 @@
                     url: '/pegarUrlsRestante', 
                     data: { instancia: instancia}, 
                     success: function (data) {
+                        $("#filtroLinks").val("");
+                        $("#tituloModalLinks").html("Links restantes a serem acessados");
                         $(".modalLinks").eq(0).css("display","flex");
                         let lista = "";
                         data.forEach(e=>lista+= "<li>" + e + "</li>")
