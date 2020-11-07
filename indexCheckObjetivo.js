@@ -7,11 +7,9 @@ let browser = null;
 let id = 0;
 let urlsAcessadas = [];
 let urlsPegas = [];
-let urlsPegasNaoRepete = [];
 let urlsException = [];
 let urlsLog = [];
 let palavrasChaveComp = [];
-let pause = true;
 
 module.exports = {
     Crawler: async function Crawler (mostrarBrowser,urlBase,p,repetirUrl,urlException,funcoes, palavraBusca) {
@@ -228,7 +226,7 @@ async function processoCrawler(browser, objInstancia, urlBase){
                                     fullPage: false
                                 });
                             }
-
+                            
                             if(objInstancia.Funcoes["ObterLinks"] == "true"){
                                 if(!objInstancia.UrlsNoLog.includes(objInstancia.UrlsPegas[i].split("__|__")[1])){
                                     objInstancia.UrlsNoLog.push(objInstancia.UrlsPegas[i].split("__|__")[1]);
@@ -236,7 +234,7 @@ async function processoCrawler(browser, objInstancia, urlBase){
                                     escreveNoLog("{\"Instancia\":\"" + instanciaResponsavel + "\",\"Url\":\""+objInstancia.UrlsPegas[i].split("__|__")[1]+"\",\"ObtidoEm\": \"" + objInstancia.UrlsPegas[i].split("__|__")[0] + "\" ,\"IdImg\":\"" + id + "\"},\n", "LogLinksNew");
                                 }
                             }
-
+                            
                             if(objInstancia.Funcoes["BuscarNaPagina"] == "true"){
                                 let result =  await buscaPalavrasChaveNaPagina(objInstancia.Page,objInstancia.PalavraBusca,objInstancia);
                                 if(result){
@@ -263,10 +261,8 @@ async function processoCrawler(browser, objInstancia, urlBase){
                                     let objError = {instancia: instanciaResponsavel,dominio: urlDomain, pagina: urlContent, protocolo: protocolo, erros: ["PAGE NOT FOUND: " + url]};
                                     
                                     escreveNoLog(objError,"ObjetosLogNew");
-                                }
-                                        
+                                }                                       
                             }
-                            
                         }catch(e){
                             //console.log("Erro de navegação: ");
                         }
