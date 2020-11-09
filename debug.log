@@ -1802,3 +1802,4 @@
 [1106/203049.972:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 69140
 [1106/203049.972:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
 [1106/203933.904:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1108/232451.798:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
